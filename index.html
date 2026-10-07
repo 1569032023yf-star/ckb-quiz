@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1677ff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="成考刷题">
+<title>成人专升本刷题</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ 首页 ============ -->
+<section class="view" id="view-home">
+  <header class="home-head">
+    <h1>成人专升本刷题</h1>
+    <p class="sub">离线可用 · 数据存在本机</p>
+  </header>
+
+  <div class="subj-tabs" id="subj-tabs"></div>
+
+  <div class="stats-card">
+    <div class="stat"><b id="st-total">0</b><span>总题数</span></div>
+    <div class="stat"><b id="st-done">0</b><span>已答</span></div>
+    <div class="stat"><b id="st-acc">0%</b><span>正确率</span></div>
+    <div class="stat"><b id="st-wrong">0</b><span>错题</span></div>
+    <div class="stat"><b id="st-fav">0</b><span>收藏</span></div>
+  </div>
+
+  <div class="menu">
+    <button class="menu-item" data-act="order">
+      <span class="mi-icon blue">▶</span>
+      <span class="mi-text"><b>顺序练习</b><i>按题库顺序从头刷</i></span>
+      <span class="mi-arrow">›</span>
+    </button>
+    <button class="menu-item" data-act="random">
+      <span class="mi-icon purple">🔀</span>
+      <span class="mi-text"><b>随机练习</b><i>打乱顺序随机出题</i></span>
+      <span class="mi-arrow">›</span>
+    </button>
+    <button class="menu-item" data-act="chapter">
+      <span class="mi-icon green">📚</span>
+      <span class="mi-text"><b>按章节练习</b><i>选择章节专项突破</i></span>
+      <span class="mi-arrow">›</span>
+    </button>
+    <button class="menu-item" data-act="wrong">
+      <span class="mi-icon red">✗</span>
+      <span class="mi-text"><b>错题本</b><i id="m-wrong">暂无错题</i></span>
+      <span class="mi-arrow">›</span>
+    </button>
+    <button class="menu-item" data-act="fav">
+      <span class="mi-icon amber">★</span>
+      <span class="mi-text"><b>收藏题</b><i id="m-fav">暂无收藏</i></span>
+      <span class="mi-arrow">›</span>
+    </button>
+  </div>
+
+  <div class="data-panel">
+    <div class="dp-title">学习数据</div>
+    <div class="dp-btns">
+      <button class="btn ghost" id="btn-export">导出学习数据</button>
+      <button class="btn ghost" id="btn-import">导入学习数据</button>
+      <button class="btn ghost danger" id="btn-clear">清空记录</button>
+    </div>
+    <input type="file" id="file-import" accept="application/json" hidden>
+  </div>
+
+  <p class="foot-tip">题库文件：questions.json · 共 <b id="st-src">0</b> 题</p>
+</section>
+
+<!-- ============ 章节页 ============ -->
+<section class="view hidden" id="view-chapter">
+  <header class="bar">
+    <button class="bar-back" data-back>‹</button>
+    <span class="bar-title">选择章节</span>
+  </header>
+  <div class="chapter-list" id="chapter-list"></div>
+</section>
+
+<!-- ============ 刷题页 ============ -->
+<section class="view hidden" id="view-quiz">
+  <header class="bar">
+    <button class="bar-back" data-back>‹</button>
+    <span class="bar-title" id="q-meta">1【单选】</span>
+    <button class="bar-fav" id="btn-fav">☆</button>
+  </header>
+  <div class="progress-line"><div id="q-progress"></div></div>
+
+  <div class="quiz-body">
+    <div class="q-index"><span id="q-pos">1/10</span><span id="q-source" class="q-src"></span></div>
+    <h2 class="q-text" id="q-text"></h2>
+
+    <div class="passage-box hidden" id="q-passage">
+      <button class="psg-toggle" id="btn-psg">📄 显示原文</button>
+      <div class="psg-body hidden" id="psg-body"></div>
+    </div>
+
+    <div class="options" id="q-options"></div>
+
+    <div class="fill-box hidden" id="q-fill">
+      <input class="fill-input" id="fill-input" type="text" autocomplete="off"
+             placeholder="填入答案，支持 e^-2 / 1/e^2 等写法">
+    </div>
+
+    <div class="essay-box hidden" id="q-essay">
+      <textarea class="essay-input" id="essay-input" rows="4"
+                placeholder="可以先自己写要点（可选），再点下方按钮看参考答案"></textarea>
+    </div>
+
+    <div class="result-box hidden" id="q-result">
+      <div class="rb-head" id="rb-head"></div>
+      <div class="rb-answer" id="rb-answer"></div>
+      <div class="rb-exp">
+        <div class="exp-title">解析</div>
+        <div class="exp-body" id="rb-explain"></div>
+      </div>
+      <button class="btn hidden" id="btn-remove-wrong">✓ 已掌握，移出错题本</button>
+      <div class="self-row hidden" id="q-self">
+        <span>自评：</span>
+        <button class="btn tiny ok" data-self="1">✓ 会了</button>
+        <button class="btn tiny bad" data-self="0">✗ 没答好</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="quiz-foot">
+    <button class="btn" id="btn-prev">上一题</button>
+    <button class="btn primary" id="btn-submit">检查答案看解析</button>
+    <button class="btn" id="btn-next">下一题</button>
+  </footer>
+</section>
+
+<!-- ============ 完成页 ============ -->
+<section class="view hidden" id="view-done">
+  <div class="done-card">
+    <div class="done-emoji">🎉</div>
+    <h2>本组题目已完成</h2>
+    <p id="done-text"></p>
+    <button class="btn primary" id="btn-done-home">返回首页</button>
+    <button class="btn" id="btn-done-retry">再练一次</button>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script src="vendor/katex/katex.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
