@@ -250,7 +250,17 @@
 
   /* 答案等价归一化（填空判分用） */
   function normAns(s) {
-    return String(s == null ? "" : s).toLowerCase()
+    var t = String(s == null ? "" : s).toLowerCase();
+    t = t.replace(/\$/g, "")
+      .replace(/\\left|\\right|\\!|\\,|\\;/g, "")
+      .replace(/\\dfrac|\\tfrac|\\frac/g, "\\frac")
+      .replace(/\\sqrt\[3\]\{([^{}]*)\}/g, "cbrt($1)")
+      .replace(/\\sqrt\{([^{}]*)\}/g, "sqrt($1)")
+      .replace(/\\(ln|sin|cos|tan|arctan|arcsin|arccos|log|pi|lim)\b/g, "$1");
+    for (var i = 0; i < 3; i++) {          // \frac{a}{b} -> a/b
+      t = t.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g, "$1/$2");
+    }
+    return t.replace(/\\/g, "")
       .replace(/\s+/g, "")
       .replace(/[{}]/g, "")
       .replace(/[（）]/g, "()")

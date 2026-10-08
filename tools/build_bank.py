@@ -7,7 +7,7 @@
   政治仿真卷 41        _tmp/sim.json
   英语 2020-2025 真题  _tmp/en_ocr.json + _tmp/patch_en_final.json
   英语仿真卷 61        _tmp/sim.json
-  高数 2023 真题 28    _tmp/m2023.json       （PDF 文本层 + 官方答案）
+  高数 2020-2025 真题  _tmp/m{2020..2025}.json （PDF 逐页人工转录 + 官方答案）
   高数仿真卷 18        _tmp/sim.json
 """
 import os, json, re, sys
@@ -33,6 +33,32 @@ def clean(s):
     return s.strip()
 
 
+def plain_variants(ans):
+    """为填空题答案生成若干等价写法（去 $、LaTeX 转文本、分数转 a/b）。"""
+    out = []
+
+    def add(x):
+        x = (x or "").strip()
+        if x and x not in out:
+            out.append(x)
+
+    for a in ans:
+        add(a)
+        t = a.replace("$", "")
+        t = t.replace("\\left", " ").replace("\\right", " ")
+        t = t.replace("\\dfrac", "\\frac").replace("\\tfrac", "\\frac")
+        for _ in range(3):  # \frac{a}{b} -> a/b（反复替换以处理简单嵌套）
+            t = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"\1/\2", t)
+        t = re.sub(r"\\sqrt\[3\]\{([^{}]*)\}", r"cbrt(\1)", t)
+        t = re.sub(r"\\sqrt\{([^{}]*)\}", r"sqrt(\1)", t)
+        t = re.sub(r"\\(ln|sin|cos|tan|arctan|arcsin|arccos|log|pi|lim)\b", r"\1", t)
+        t = t.replace("\\", "").replace("{", "").replace("}", "")
+        t = re.sub(r"\s+", " ", t).strip()
+        add(t)
+        add(t.replace(" ", ""))
+    return out
+
+
 allq = []
 allq += load("demo.json")
 for y in (2020, 2021, 2022, 2023, 2024, 2025):
@@ -41,6 +67,9 @@ allq += load("sim.json")
 allq += load("en_ocr.json")
 allq += load("patch_en_final.json")
 allq += load("m2023.json")
+# 高数其余 5 年真题：扫描件逐题人工转录（选择/填空/解答）
+for y in (2020, 2021, 2022, 2024, 2025):
+    allq += load(f"m{y}.json")
 
 # 章节名统一成「科目 + 章节」
 CHAP_FIX = {"2020年真题": "政治 2020年真题", "2021年真题": "政治 2021年真题",
@@ -68,6 +97,8 @@ for q in allq:
     q["options"] = opts
     if isinstance(q.get("passage"), str):
         q["passage"] = clean(q["passage"])
+    if q["type"] == "fill":          # 填空题：自动补齐等价写法，方便直接输入
+        q["answer"] = plain_variants(q.get("answer") or [])
     bank[qid] = q
 
 # 2) 校验
@@ -95,8 +126,9 @@ for qid, q in bank.items():
     if why:
         dropped.append((qid, why))
         continue
-    # 同科同章内题干去重
-    sig = (q["subject"], q["chapter"], re.sub(r"\s+", "", q["question"])[:80])
+    # 同科同章内题干去重（阅读题用所属文章首句区分，避免不同 passage 的同名题干被误删）
+    pas = re.sub(r"\s+", "", q.get("passage", "") or "")[:30]
+    sig = (q["subject"], q["chapter"], pas, re.sub(r"\s+", "", q["question"])[:80])
     if sig in seen_stem:
         dropped.append((qid, "与题干重复 " + seen_stem[sig]))
         continue
