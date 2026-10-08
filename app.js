@@ -103,7 +103,8 @@
       right: right,
       acc: keys.length ? Math.round(right / keys.length * 100) : 0,
       wrong: DB.wrong.filter(function (id) { return ids[id]; }).length,
-      fav: DB.fav.filter(function (id) { return ids[id]; }).length
+      fav: DB.fav.filter(function (id) { return ids[id]; }).length,
+      essay: pool().filter(function (q) { return q.type === "essay"; }).length
     };
   }
   function renderHome() {
@@ -116,6 +117,7 @@
     $("st-src").textContent = s.total;
     $("m-wrong").textContent = s.wrong ? s.wrong + " 道待攻克" : "暂无错题";
     $("m-fav").textContent = s.fav ? s.fav + " 道已收藏" : "暂无收藏";
+    $("m-essay").textContent = s.essay ? s.essay + " 道 · 未掌握自动入错题本" : "本科目暂无主观题";
     showView("home");
   }
 
@@ -125,6 +127,11 @@
       var act = btn.dataset.act;
       var ids = pool().map(function (q) { return q.id; });
       if (act === "chapter") { renderChapters(); return; }
+      if (act === "essay") {
+        var eids = pool().filter(function (q) { return q.type === "essay"; }).map(function (q) { return q.id; });
+        startSession(eids, "essay:" + curSubj, (curSubj === "全部" ? "" : curSubj + " ") + "主观题专练");
+        return;
+      }
       if (act === "wrong") {
         startSession(DB.wrong.filter(function (id) { return ids.indexOf(id) >= 0; }), "wrong:" + curSubj, "错题重刷");
         return;
@@ -178,6 +185,8 @@
     if (!q) { finishSession(); return; }
     session.selected = [];
     session.submitted = false;
+    session.essayRecorded = false;   // 本轮主观题是否已写入记录
+    session.essayTouched = false;    // 本轮主观题是否被操作过（看答案/自评）
     var rec = DB.answered[q.id];
 
     $("q-meta").textContent = (session.idx + 1) + "【" + (TYPE_LABEL[q.type] || q.type) + "】";
@@ -277,7 +286,10 @@
 
     if (q.type === "essay") {          // 主观题：直接看参考答案 + 自评
       session.submitted = true;
+      session.essayTouched = true;
       showResult(q, null, true);
+      $("rb-answer").innerHTML = '<span class="essay-tip">看完参考答案后请用下方按钮自评：' +
+        '选「会了」记为掌握；选「没答好」或<b>直接翻到下一题（不选）</b>，都会按「未掌握」自动记入错题本。</span>';
       $("q-self").classList.remove("hidden");
       $("btn-submit").classList.add("hidden");
       return;
@@ -318,6 +330,17 @@
     saveStore();
   }
 
+  /* 主观题兜底：离开本题时若还没自评，按「未掌握」自动记入错题本 */
+  function commitPendingEssay() {
+    if ($("view-quiz").classList.contains("hidden")) return;
+    if (session.essayRecorded) return;
+    var q = byId(session.list[session.idx]);
+    if (!q || q.type !== "essay") return;
+    record(q, false);
+    session.essayRecorded = true;
+    toast(session.essayTouched ? "主观题未自评，已按「未掌握」记入错题本" : "主观题未作答，已记入错题本");
+  }
+
   function showResult(q, correct, isEssay) {
     var box = $("q-result");
     box.classList.remove("hidden");
@@ -339,6 +362,12 @@
         (correct ? "" : "　你选了：<span style='color:var(--red)'>" + esc(session.selected.join("、")) + "</span>");
     }
     $("rb-explain").innerHTML = md(q.explanation || "（本题暂无解析）");
+    // 主观题：把自评按钮提到长解析上方，免得被顶到屏幕外看不见
+    var selfRow = $("q-self");
+    if (selfRow.parentNode === box) {
+      if (isEssay) box.insertBefore(selfRow, box.querySelector(".rb-exp"));
+      else box.appendChild(selfRow);
+    }
     // 答对且仍留在错题本（历史错题）→ 可手动移出
     $("btn-remove-wrong").classList.toggle("hidden", !(correct && DB.wrong.indexOf(q.id) < 0 && (DB.answered[q.id] || {}).count > 1));
     box.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -349,9 +378,15 @@
     b.onclick = function () {
       var q = byId(session.list[session.idx]);
       if (!q) return;
-      record(q, b.dataset.self === "1");
+      var ok = b.dataset.self === "1";
+      record(q, ok);
+      session.essayRecorded = true;
+      session.essayTouched = true;
       $("q-self").classList.add("hidden");
-      toast(b.dataset.self === "1" ? "已记为掌握" : "已加入错题本");
+      $("rb-answer").innerHTML = ok
+        ? '<span class="essay-tip">已记为 <b style="color:var(--green)">掌握</b>，未记入错题本。</span>'
+        : '<span class="essay-tip">已记为 <b>未掌握</b>，已加入错题本，可去「错题本」反复背。</span>';
+      toast(ok ? "已记为掌握" : "已加入错题本");
     };
   });
 
@@ -369,12 +404,14 @@
 
   /* ---------------- 导航 ---------------- */
   $("btn-prev").onclick = function () {
-    if (session.idx > 0) { session.idx--; DB.progress[session.key] = session.idx; saveStore(); renderQuestion(); }
+    if (session.idx > 0) { commitPendingEssay(); session.idx--; DB.progress[session.key] = session.idx; saveStore(); renderQuestion(); }
   };
   $("btn-next").onclick = function () {
     if (session.idx < session.list.length - 1) {
+      commitPendingEssay();
       session.idx++; DB.progress[session.key] = session.idx; saveStore(); renderQuestion();
     } else {
+      commitPendingEssay();
       DB.progress[session.key] = 0; saveStore(); finishSession();
     }
   };
@@ -385,7 +422,7 @@
   }
   $("btn-done-home").onclick = function () { renderHome(); };
   $("btn-done-retry").onclick = function () { startSession(session.list.slice(), session.key, session.title || "练习"); };
-  document.querySelectorAll("[data-back]").forEach(function (b) { b.onclick = function () { renderHome(); }; });
+  document.querySelectorAll("[data-back]").forEach(function (b) { b.onclick = function () { commitPendingEssay(); renderHome(); }; });
 
   /* ---------------- 收藏 ---------------- */
   $("btn-fav").onclick = function () {

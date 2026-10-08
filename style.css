@@ -168,10 +168,12 @@ button { font-family: inherit; }
 .btn.tiny.bad { border-color: var(--red); color: var(--red); background: var(--red-weak); }
 .rb-answer { padding: 10px 16px; background: #fff; font-size: 14px; border-bottom: 1px solid var(--border); }
 .rb-answer b { color: var(--green); }
+.essay-tip { display: block; font-size: 12.5px; line-height: 1.65; color: var(--muted); }
+.essay-tip b { color: var(--red); }
 .rb-exp { padding: 12px 16px; background: #fafbfc; }
 .exp-title { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
 .exp-body { font-size: 14.5px; color: #444; }
-.result-box .btn { margin: 12px 16px; width: calc(100% - 32px); flex: none; }
+.result-box > .btn { margin: 12px 16px; width: calc(100% - 32px); flex: none; }
 
 .quiz-foot {
   position: sticky; bottom: 0; background: #fff; border-top: 1px solid var(--border);
