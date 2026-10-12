@@ -125,6 +125,15 @@ for e in load_errata():
                 q[k] = q[k].replace(old, new)
     errata_used.append(e)
 
+# 1.6) 英语词汇题题干修复补丁（恢复被 OCR 吞掉的空位符、剥离页脚噪声）
+sp = os.path.join(os.path.dirname(os.path.abspath(__file__)), "patch_en_stem.json")
+stem_patch = json.load(open(sp, encoding="utf-8")) if os.path.exists(sp) else {}
+stem_hit = 0
+for qid, text in stem_patch.items():
+    if qid in bank:
+        bank[qid]["question"] = text
+        stem_hit += 1
+
 # 2) 校验
 good, dropped = [], []
 seen_stem = {}
@@ -204,6 +213,7 @@ print("-" * 60)
 print("应用勘误", len(errata_used), "条")
 for e in errata_used:
     print("   *", e["id"], "|", e.get("note", ""))
+print("应用题干补丁", stem_hit, "条（英语词汇题空位恢复）")
 print("解析/答案一致性自检：", "通过（0 处不一致）" if not mism else "%d 处不一致" % len(mism))
 for m in mism:
     print("   !", m)

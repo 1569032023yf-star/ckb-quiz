@@ -1,5 +1,5 @@
 /* Service Worker：缓存应用外壳 + 题库 + KaTeX，实现离线打开 */
-var CACHE = "ckb-v7";
+var CACHE = "ckb-v8";
 var ASSETS = [
   "./",
   "./index.html",

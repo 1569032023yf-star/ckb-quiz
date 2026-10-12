@@ -119,6 +119,26 @@ def collect_answers(lines):
 
 LEAD = re.compile(r"(?<!\d)(\d{1,2})\s*[.．、](?!\d)")
 
+# 试卷装订线附近的镜像/竖排文字会被 OCR 混进正文，统一清掉
+NOISE_WORDS = ["线内不要答题", "内不要答题", "不要答题", "封线内不", "要答题",
+               "不 要 答 题", "密 封", "密封线内", "封线", "答题"]
+
+
+def strip_noise(s, keep_gaps=False):
+    """清掉装订线镜像文字 / 页脚 / 页码噪声。
+    keep_gaps=True 时保留连续空格——题干里那是空位下划线的唯一残留信号。"""
+    if not isinstance(s, str) or not s:
+        return s
+    SENT = "\x00"
+    for w in NOISE_WORDS:
+        s = s.replace(w, SENT)
+    s = re.sub(r"第\s*\d+\s*页", SENT, s)
+    s = re.sub(r"[\u4e00-\u9fff]{0,16}招生全国统一考试", SENT, s)
+    s = re.sub(r"\s*" + SENT + r"+\s*", " ", s)
+    if not keep_gaps:
+        s = re.sub(r"\s{2,}", " ", s)
+    return s.strip()
+
 
 def strip_lead(l):
     """行首可能被 OCR 粘上噪声（'(考点学校名称)  6.'、'1901708  15.'），剥掉后返回标准题号行"""
@@ -187,12 +207,13 @@ def parse_year(y, phon_ans=None):
         a = ans.get(no)
         if a is None or not opts or a not in opts:
             return
+        pas = strip_noise(passage) if passage else None
         qs.append({
             "id": f"en{y}-{no}", "subject": "英语", "chapter": f"英语 {y}年真题",
-            "type": "single", "question": q.strip(),
+            "type": "single", "question": strip_noise(q, keep_gaps=True),
             "options": [{"key": k, "text": v} for k, v in sorted(opts.items())],
-            "answer": [a], "explanation": get_expl(no, a),
-            **({"passage": passage} if passage else {}),
+            "answer": [a], "explanation": strip_noise(get_expl(no, a)),
+            **({"passage": pas} if pas else {}),
         })
 
     OPT_SPLIT = re.compile(r"(?=(?<![A-Za-z0-9])[A-H]\s*[.．、]\s*)")
@@ -320,23 +341,39 @@ def parse_year(y, phon_ans=None):
                 continue
             if re.match(r"^(Directions|得分|评卷)", l):
                 continue
-            if re.match(r"^[A-Za-z]+[:：]", l):
+            if re.match(r"^(第[一二三四五六]部分|非选择题|选择题|第二部分)", l):
+                continue
+            if re.match(r"^[A-Za-z]+\s*[:：]", l):      # 说话人行（"Secretary :" 也算）
                 opt_zone = False
             if not opt_zone:
                 dlg.append(l)
+        # 对话原文（此前只收集没使用，导致补全对话缺原文）
+        pas = re.sub(r"\s+", " ", " ".join(dlg)).strip()
+        pas = re.sub(r"(?<![\dA-Za-z])[\s_]*(5[6-9]|60)[\s_]*(?![\d])",
+                     lambda m: " ____(%s) " % m.group(1), pas)
+        pas = re.sub(r"\s+([:：])", r"\1", pas)
+        pas = re.sub(r"(?<=[A-Za-z])\.\s+(?=[A-Za-z]\.)", ".", pas)   # p. m. -> p.m.
+        pas = strip_noise(pas)
+        # 2025 年扫描件 OCR 严重损坏（装订线镜像文字混入、缺第58空），待重新 OCR 后再补
+        if y == 2025:
+            pas = ""
         for no in range(56, 61):
             if ans.get(no) and ans[no] in opts:
-                build(no, f"补全对话：第 {no} 空（从 A-H 中选出最佳选项）", opts)
+                build(no, f"补全对话：第 {no} 空（从 A-H 中选出最佳选项）", opts, passage=pas or None)
     wr = next((s for s in secs if s["name"] == "writ"), None)
     if wr:
         txt = " ".join(wr["lines"])
         m = re.search(r"61\s*[.．、]\s*(.*)$", txt)
         if m:
+            # 作文题干后面常跟着页脚与答案页，在噪声处截断
+            body = re.split(r"(?:[\u4e00-\u9fff]{0,8}招生全国统一考试|\d{4}\s*年成人高等学校|第\s*\d+\s*页)",
+                            m.group(1))[0]
+            body = strip_noise(body).strip()
             qs.append({
                 "id": f"en{y}-61", "subject": "英语", "chapter": f"英语 {y}年真题",
-                "type": "essay", "question": "【写作】" + m.group(1).strip(),
+                "type": "essay", "question": "【写作】" + body,
                 "options": [], "answer": [],
-                "explanation": expl.get(61) or "写作题（25分）：内容完整、格式正确、语言通顺，100~120词。",
+                "explanation": strip_noise(expl.get(61)) or "写作题（25分）：内容完整、格式正确、语言通顺，100~120词。",
             })
     return qs
 
