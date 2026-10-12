@@ -33,6 +33,14 @@ def clean(s):
     return s.strip()
 
 
+def load_errata():
+    """人工核对后的勘误表（原卷笔误 / OCR 残留），随题库一起重建，不会丢。"""
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "errata.json")
+    if not os.path.exists(p):
+        return []
+    return json.load(open(p, encoding="utf-8"))
+
+
 def plain_variants(ans):
     """为填空题答案生成若干等价写法（去 $、LaTeX 转文本、分数转 a/b）。"""
     out = []
@@ -101,6 +109,22 @@ for q in allq:
         q["answer"] = plain_variants(q.get("answer") or [])
     bank[qid] = q
 
+# 1.5) 应用勘误表（覆盖原卷笔误 / 清理 OCR 残留）
+errata_used = []
+for e in load_errata():
+    q = bank.get(e["id"])
+    if not q:
+        print("!! 勘误指向的题目不存在：", e["id"])
+        continue
+    for k, v in (e.get("set") or {}).items():
+        q[k] = v
+    for pair in (e.get("replace") or []):
+        old, new = pair[0], pair[1]
+        for k in ("question", "explanation", "passage"):
+            if isinstance(q.get(k), str) and old in q[k]:
+                q[k] = q[k].replace(old, new)
+    errata_used.append(e)
+
 # 2) 校验
 good, dropped = [], []
 seen_stem = {}
@@ -166,3 +190,20 @@ print("题型分布", Counter(q["type"] for q in good))
 print("丢弃", len(dropped), "题")
 for d in dropped[:40]:
     print("   x", d[0], d[1])
+
+# 4) 一致性自检：解析里的「故选X / 答案为X」必须与 answer 字段一致
+mism = []
+for q in good:
+    if q["type"] not in ("single", "multiple", "judge"):
+        continue
+    ans = set(q.get("answer") or [])
+    for m in re.finditer(r"故选\s*[:：]?\s*([A-H])\b", q.get("explanation") or ""):
+        if m.group(1) not in ans:
+            mism.append((q["id"], "故选" + m.group(1), sorted(ans)))
+print("-" * 60)
+print("应用勘误", len(errata_used), "条")
+for e in errata_used:
+    print("   *", e["id"], "|", e.get("note", ""))
+print("解析/答案一致性自检：", "通过（0 处不一致）" if not mism else "%d 处不一致" % len(mism))
+for m in mism:
+    print("   !", m)
