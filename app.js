@@ -336,9 +336,11 @@
     if (session.essayRecorded) return;
     var q = byId(session.list[session.idx]);
     if (!q || q.type !== "essay") return;
+    // 既没输入答案、也没查看参考答案 → 视为未做过，不记入错题本
+    if (!session.essayTouched && !$("essay-input").value.trim()) return;
     record(q, false);
     session.essayRecorded = true;
-    toast(session.essayTouched ? "主观题未自评，已按「未掌握」记入错题本" : "主观题未作答，已记入错题本");
+    toast(session.essayTouched ? "主观题未自评，已按「未掌握」记入错题本" : "主观题已作答未自评，已记入错题本");
   }
 
   function showResult(q, correct, isEssay) {
@@ -362,14 +364,18 @@
         (correct ? "" : "　你选了：<span style='color:var(--red)'>" + esc(session.selected.join("、")) + "</span>");
     }
     $("rb-explain").innerHTML = md(q.explanation || "（本题暂无解析）");
-    // 主观题：把自评按钮提到长解析上方，免得被顶到屏幕外看不见
+    // 主观题：自评按钮放在完整参考答案（答案 + 解析）之后
     var selfRow = $("q-self");
-    if (selfRow.parentNode === box) {
-      if (isEssay) box.insertBefore(selfRow, box.querySelector(".rb-exp"));
-      else box.appendChild(selfRow);
+    if (selfRow.parentNode === box) box.appendChild(selfRow);
+    // 客观题：答案与长篇解析之间放「加入 / 移出错题本」按钮；主观题沿用自评按钮
+    var wrongBtn = $("btn-remove-wrong");
+    if (isEssay) {
+      wrongBtn.classList.add("hidden");
+    } else {
+      wrongBtn.classList.remove("hidden");
+      refreshWrongBtn(q);
+      box.insertBefore(wrongBtn, box.querySelector(".rb-exp"));
     }
-    // 答对且仍留在错题本（历史错题）→ 可手动移出
-    $("btn-remove-wrong").classList.toggle("hidden", !(correct && DB.wrong.indexOf(q.id) < 0 && (DB.answered[q.id] || {}).count > 1));
     box.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
@@ -395,11 +401,20 @@
     return a.slice().sort().join(",") === b.slice().sort().join(",");
   }
 
+  function refreshWrongBtn(q) {
+    var inWrong = DB.wrong.indexOf(q.id) >= 0;
+    $("btn-remove-wrong").textContent = inWrong ? "✓ 已掌握，移出错题本" : "＋ 标记不会，加入错题本";
+  }
+
   $("btn-remove-wrong").onclick = function () {
     var id = session.list[session.idx];
+    var q = byId(id);
+    if (!q) return;
     var i = DB.wrong.indexOf(id);
-    if (i >= 0) { DB.wrong.splice(i, 1); saveStore(); toast("已移出错题本"); renderHome(); }
-    else toast("该题不在错题本中");
+    if (i >= 0) { DB.wrong.splice(i, 1); toast("已移出错题本"); }
+    else { DB.wrong.push(id); toast("已加入错题本"); }
+    saveStore();
+    refreshWrongBtn(q);   // 不调用 renderHome()，操作后停留在当前题
   };
 
   /* ---------------- 导航 ---------------- */
