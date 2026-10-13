@@ -168,9 +168,13 @@
   /* ---------------- 会话 ---------------- */
   function startSession(ids, mode, title) {
     if (!ids.length) { toast("这里还没有题目"); return; }
+    // 随机 / 错题重刷 / 收藏题：每次都从当前列表第 1 题开始；
+    // 顺序练习 / 按章节练习：沿用原来的断点续刷（读 DB.progress）
+    var head = String(mode).split(":")[0];
+    var noResume = head === "random" || head === "wrong" || head === "fav";
     session = {
       list: ids.filter(function (id) { return byId(id); }),
-      idx: DB.progress[mode] || 0,
+      idx: noResume ? 0 : (DB.progress[mode] || 0),
       key: mode, mode: mode, title: title,
       selected: [], submitted: false
     };
@@ -323,9 +327,9 @@
     rec.count++; if (correct) rec.right++;
     rec.last = correct;
     DB.answered[q.id] = rec;
-    var wi = DB.wrong.indexOf(q.id);
-    if (correct) { if (wi >= 0) DB.wrong.splice(wi, 1); }
-    else if (wi < 0) { DB.wrong.push(q.id); }
+    // 答错：首次自动加入错题本；答对：只更新答题记录，
+    // 历史错题继续保留，需用户点「已掌握，移出错题本」手动移除
+    if (!correct && DB.wrong.indexOf(q.id) < 0) DB.wrong.push(q.id);
     DB.progress[session.key] = session.idx;
     saveStore();
   }
@@ -386,6 +390,11 @@
       if (!q) return;
       var ok = b.dataset.self === "1";
       record(q, ok);
+      // 自评「会了」= 已掌握，与「移出错题本」按钮同义，显式移出
+      if (ok) {
+        var wi = DB.wrong.indexOf(q.id);
+        if (wi >= 0) { DB.wrong.splice(wi, 1); saveStore(); }
+      }
       session.essayRecorded = true;
       session.essayTouched = true;
       $("q-self").classList.add("hidden");
