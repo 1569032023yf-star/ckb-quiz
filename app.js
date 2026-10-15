@@ -8,17 +8,20 @@
   var TYPE_LABEL = { single: "单选", multiple: "多选", judge: "判断", fill: "填空", essay: "主观" };
 
   /* ---------------- 状态 ---------------- */
-  var DB = { answered: {}, wrong: [], fav: [], progress: {} };
+  var DB = { answered: {}, wrong: [], fav: [], progress: {}, words: [] };
   var QUESTIONS = [];
   var SUBJECTS = [];
   var curSubj = "全部";
   var session = { list: [], idx: 0, key: "", mode: "", selected: [], submitted: false };
+  var wordEditIdx = -1;        // 生词编辑：-1=新增，>=0=编辑已有
+  var wordSrc = "", wordNo = 0; // 待保存生词的来源（章节 + 题号）
 
   function loadStore() {
     try {
       var raw = localStorage.getItem(STORE_KEY);
       if (raw) DB = Object.assign(DB, JSON.parse(raw));
     } catch (e) { console.warn("读取本地数据失败", e); }
+    if (!Array.isArray(DB.words)) DB.words = [];   // 旧数据无 words 字段时的兼容
   }
   function saveStore() { localStorage.setItem(STORE_KEY, JSON.stringify(DB)); }
 
@@ -47,7 +50,7 @@
     clearTimeout(t._t); t._t = setTimeout(function () { t.classList.remove("show"); }, 1600);
   }
   function showView(name) {
-    ["home", "chapter", "quiz", "done"].forEach(function (v) {
+    ["home", "chapter", "quiz", "done", "words"].forEach(function (v) {
       $("view-" + v).classList.toggle("hidden", v !== name);
     });
     window.scrollTo(0, 0);
@@ -104,6 +107,7 @@
       acc: keys.length ? Math.round(right / keys.length * 100) : 0,
       wrong: DB.wrong.filter(function (id) { return ids[id]; }).length,
       fav: DB.fav.filter(function (id) { return ids[id]; }).length,
+      words: DB.words.length,
       essay: pool().filter(function (q) { return q.type === "essay"; }).length
     };
   }
@@ -116,6 +120,7 @@
     $("st-fav").textContent = s.fav;
     $("st-src").textContent = s.total;
     $("m-wrong").textContent = s.wrong ? s.wrong + " 道待攻克" : "暂无错题";
+    $("m-words").textContent = s.words ? s.words + " 个生词" : "暂无生词";
     $("m-fav").textContent = s.fav ? s.fav + " 道已收藏" : "暂无收藏";
     $("m-essay").textContent = s.essay ? s.essay + " 道 · 未掌握自动入错题本" : "本科目暂无主观题";
     showView("home");
@@ -127,6 +132,7 @@
       var act = btn.dataset.act;
       var ids = pool().map(function (q) { return q.id; });
       if (act === "chapter") { renderChapters(); return; }
+      if (act === "words") { renderWords(); return; }
       if (act === "essay") {
         var eids = pool().filter(function (q) { return q.type === "essay"; }).map(function (q) { return q.id; });
         startSession(eids, "essay:" + curSubj, (curSubj === "全部" ? "" : curSubj + " ") + "主观题专练");
@@ -327,9 +333,16 @@
     rec.count++; if (correct) rec.right++;
     rec.last = correct;
     DB.answered[q.id] = rec;
-    // 答错：首次自动加入错题本；答对：只更新答题记录，
-    // 历史错题继续保留，需用户点「已掌握，移出错题本」手动移除
-    if (!correct && DB.wrong.indexOf(q.id) < 0) DB.wrong.push(q.id);
+    // 错题重刷模式：客观题答对 → 立即移出错题本（list 为快照，不动 session.list，故不跳题）
+    // 其余情况：答错首次自动加入错题本；答对只更新记录，历史错题保留，需手动移出
+    var inWrongMode = String(session.mode || "").indexOf("wrong:") === 0;
+    var objective = q.type === "single" || q.type === "multiple" || q.type === "judge";
+    var wi = DB.wrong.indexOf(q.id);
+    if (inWrongMode && objective && correct) {
+      if (wi >= 0) { DB.wrong.splice(wi, 1); toast("✓ 已掌握，本题已移出错题本"); }
+    } else if (!correct && wi < 0) {
+      DB.wrong.push(q.id);
+    }
     DB.progress[session.key] = session.idx;
     saveStore();
   }
@@ -459,6 +472,97 @@
     $("btn-fav").textContent = DB.fav.indexOf(id) >= 0 ? "★" : "☆";
   };
 
+  /* ---------------- 生词本 ---------------- */
+  function normWord(w) { return String(w == null ? "" : w).trim().toLowerCase(); }
+  function wordIndex(w) {
+    var k = normWord(w);
+    for (var i = 0; i < DB.words.length; i++) { if (normWord(DB.words[i].w) === k) return i; }
+    return -1;
+  }
+  function srcLabel(w) {
+    var s = w.src || "";
+    if (!s) return "";
+    return s + (w.no ? " · 第" + w.no + "题" : "");
+  }
+  function renderWords() {
+    var list = $("word-list");
+    $("words-count").textContent = DB.words.length ? DB.words.length + " 个" : "";
+    if (!DB.words.length) {
+      list.innerHTML = '<p class="word-empty">还没有生词。<br>做英语阅读时展开原文，长按选中单词，点「＋ 收录生词」即可。</p>';
+      showView("words"); return;
+    }
+    list.innerHTML = DB.words.map(function (w, i) { return i; }).reverse().map(function (i) {
+      var w = DB.words[i];
+      return '<div class="word-item"><div class="wi-main">' +
+        '<div class="wi-word">' + esc(w.w) + (w.def ? '<span class="wi-def">' + esc(w.def) + '</span>' : '') + '</div>' +
+        (w.note ? '<div class="wi-note">' + esc(w.note) + '</div>' : '') +
+        (srcLabel(w) ? '<div class="wi-src">' + esc(srcLabel(w)) + '</div>' : '') +
+        '</div><div class="wi-ops">' +
+        '<button class="btn edit" data-wedit="' + i + '">编辑</button>' +
+        '<button class="btn del" data-wdel="' + i + '">删除</button>' +
+        '</div></div>';
+    }).join("");
+    list.querySelectorAll("[data-wedit]").forEach(function (b) {
+      b.onclick = function () { openWordSheet({ index: Number(b.dataset.wedit) }); };
+    });
+    list.querySelectorAll("[data-wdel]").forEach(function (b) {
+      b.onclick = function () {
+        var i = Number(b.dataset.wdel), w = DB.words[i];
+        if (!w) return;
+        if (!confirm('删除生词「' + w.w + '」？')) return;
+        DB.words.splice(i, 1); saveStore(); renderWords(); toast("已删除");
+      };
+    });
+    showView("words");
+  }
+  function openWordSheet(opts) {
+    opts = opts || {};
+    wordEditIdx = typeof opts.index === "number" ? opts.index : -1;
+    var w = wordEditIdx >= 0 ? DB.words[wordEditIdx] : null;
+    $("ws-title").textContent = w ? "编辑生词" : "收录生词";
+    $("ws-word").value = w ? w.w : (opts.word || "");
+    $("ws-def").value = w ? (w.def || "") : "";
+    $("ws-note").value = w ? (w.note || "") : "";
+    $("ws-src").textContent = "来源：" + (w ? (srcLabel(w) || "手动添加")
+      : (wordSrc ? srcLabel({ src: wordSrc, no: wordNo }) : "手动添加"));
+    $("word-sheet").classList.remove("hidden");
+    setTimeout(function () { $("ws-word").focus(); }, 60);
+  }
+  function closeWordSheet() { $("word-sheet").classList.add("hidden"); wordEditIdx = -1; }
+  function saveWord() {
+    var w = $("ws-word").value.trim();
+    var def = $("ws-def").value.trim();
+    var note = $("ws-note").value.trim();
+    if (!w) { toast("请先选择或手动输入单词"); $("ws-word").focus(); return; }
+    if (!/[A-Za-z]/.test(w)) { toast("请输入英文单词"); return; }
+    var dup = wordIndex(w);
+    if (wordEditIdx >= 0) {
+      if (dup >= 0 && dup !== wordEditIdx) { toast("「" + w + "」已在生词本中"); return; }
+      DB.words[wordEditIdx].w = w;
+      DB.words[wordEditIdx].def = def;
+      DB.words[wordEditIdx].note = note;
+      saveStore(); closeWordSheet(); renderWords(); toast("已更新");
+      return;
+    }
+    if (dup >= 0) { toast("「" + w + "」已在生词本中"); return; }   // 忽略大小写/首尾空格去重
+    DB.words.push({ w: w, def: def, note: note, src: wordSrc || "", no: wordNo || 0, at: Date.now() });
+    saveStore(); closeWordSheet();
+    toast("已收录：" + w);
+    if (!$("view-words").classList.contains("hidden")) renderWords();
+  }
+  $("btn-add-word").onclick = function () {
+    var q = byId(session.list[session.idx]);
+    wordSrc = q ? (q.chapter || "") : "";
+    wordNo = session.idx + 1;
+    var sel = "";
+    try { sel = String(window.getSelection ? window.getSelection().toString() : ""); } catch (e) { /* 选词失败走手动输入 */ }
+    var m = sel.match(/[A-Za-z][A-Za-z'\-]*/);
+    openWordSheet({ word: m ? m[0] : "", index: -1 });   // 选不中时留空，手动输入
+  };
+  $("ws-cancel").onclick = closeWordSheet;
+  $("ws-save").onclick = saveWord;
+  $("word-sheet").onclick = function (e) { if (e.target === $("word-sheet")) closeWordSheet(); };
+
   /* ---------------- 导出 / 导入 ---------------- */
   $("btn-export").onclick = function () {
     var payload = { app: "成人专升本刷题", version: 1, exportedAt: new Date().toISOString(), data: DB };
@@ -483,6 +587,7 @@
         DB.wrong = d.wrong || [];
         DB.fav = d.fav || [];
         DB.progress = d.progress || {};
+        DB.words = Array.isArray(d.words) ? d.words : [];
         saveStore(); renderHome(); toast("导入成功");
       } catch (err) { toast("导入失败：" + err.message); }
     };
@@ -490,8 +595,8 @@
     e.target.value = "";
   };
   $("btn-clear").onclick = function () {
-    if (confirm("确定清空全部答题记录、错题本和收藏？")) {
-      DB = { answered: {}, wrong: [], fav: [], progress: {} };
+    if (confirm("确定清空全部答题记录、错题本、生词本和收藏？")) {
+      DB = { answered: {}, wrong: [], fav: [], progress: {}, words: [] };
       saveStore(); renderHome(); toast("已清空");
     }
   };

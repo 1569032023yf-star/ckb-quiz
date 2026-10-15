@@ -59,6 +59,11 @@
       <span class="mi-text"><b>错题本</b><i id="m-wrong">暂无错题</i></span>
       <span class="mi-arrow">›</span>
     </button>
+    <button class="menu-item" data-act="words">
+      <span class="mi-icon teal">🔤</span>
+      <span class="mi-text"><b>生词本</b><i id="m-words">暂无生词</i></span>
+      <span class="mi-arrow">›</span>
+    </button>
     <button class="menu-item" data-act="fav">
       <span class="mi-icon amber">★</span>
       <span class="mi-text"><b>收藏题</b><i id="m-fav">暂无收藏</i></span>
@@ -104,6 +109,7 @@
     <div class="passage-box hidden" id="q-passage">
       <button class="psg-toggle" id="btn-psg">📄 显示原文</button>
       <div class="psg-body hidden" id="psg-body"></div>
+      <button class="word-btn" id="btn-add-word">＋ 收录生词（长按选中单词后点我）</button>
     </div>
 
     <div class="options" id="q-options"></div>
@@ -151,6 +157,34 @@
     <button class="btn" id="btn-done-retry">再练一次</button>
   </div>
 </section>
+
+<!-- ============ 生词本 ============ -->
+<section class="view hidden" id="view-words">
+  <header class="bar">
+    <button class="bar-back" data-back>‹</button>
+    <span class="bar-title">生词本</span>
+    <span class="bar-count" id="words-count"></span>
+  </header>
+  <div class="word-list" id="word-list"></div>
+</section>
+
+<!-- ============ 生词编辑弹层 ============ -->
+<div class="word-sheet hidden" id="word-sheet">
+  <div class="ws-card">
+    <div class="ws-title" id="ws-title">收录生词</div>
+    <label class="ws-label" for="ws-word">单词</label>
+    <input class="ws-input" id="ws-word" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="长按选中后自动填入，也可手动输入">
+    <label class="ws-label" for="ws-def">中文释义（可留空）</label>
+    <input class="ws-input" id="ws-def" type="text" autocomplete="off" placeholder="如：n. 环境">
+    <label class="ws-label" for="ws-note">笔记（可留空）</label>
+    <input class="ws-input" id="ws-note" type="text" autocomplete="off" placeholder="如：搭配 environmental protection">
+    <div class="ws-src" id="ws-src"></div>
+    <div class="ws-btns">
+      <button class="btn ghost" id="ws-cancel">取消</button>
+      <button class="btn primary" id="ws-save">保存</button>
+    </div>
+  </div>
+</div>
 
 <div class="toast" id="toast"></div>
 
