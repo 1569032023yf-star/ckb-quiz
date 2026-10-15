@@ -134,6 +134,19 @@ for qid, text in stem_patch.items():
         bank[qid]["question"] = text
         stem_hit += 1
 
+# 1.7) 2025 英语整卷修复补丁（装订线/透印噪声清理 + 补全对话原文 + 官方解析）
+y25 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "patch_en2025.json")
+patch25 = json.load(open(y25, encoding="utf-8")) if os.path.exists(y25) else {}
+y25_hit = 0
+for qid, upd in patch25.items():
+    q = bank.get(qid)
+    if not q:
+        print("!! 2025 英语补丁指向的题目不存在：", qid)
+        continue
+    for k, v in upd.items():
+        q[k] = v
+    y25_hit += 1
+
 # 2) 校验
 good, dropped = [], []
 seen_stem = {}

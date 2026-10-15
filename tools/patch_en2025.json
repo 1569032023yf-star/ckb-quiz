@@ -1,0 +1,1430 @@
+{
+ "en2025-1": {
+  "question": "选出划线部分读音与其他三个不同的一项：\nA. arise / B. brick / C. pride / D. child",
+  "options": [
+   {
+    "key": "A",
+    "text": "arise"
+   },
+   {
+    "key": "B",
+    "text": "brick"
+   },
+   {
+    "key": "C",
+    "text": "pride"
+   },
+   {
+    "key": "D",
+    "text": "child"
+   }
+  ],
+  "explanation": "参考答案：B"
+ },
+ "en2025-2": {
+  "question": "选出划线部分读音与其他三个不同的一项：\nA. head / B. beam / C. leaf / D. heat",
+  "options": [
+   {
+    "key": "A",
+    "text": "head"
+   },
+   {
+    "key": "B",
+    "text": "beam"
+   },
+   {
+    "key": "C",
+    "text": "leaf"
+   },
+   {
+    "key": "D",
+    "text": "heat"
+   }
+  ],
+  "explanation": "参考答案：A"
+ },
+ "en2025-3": {
+  "question": "选出划线部分读音与其他三个不同的一项：\nA. cow / B. how / C. low / D. now",
+  "options": [
+   {
+    "key": "A",
+    "text": "cow"
+   },
+   {
+    "key": "B",
+    "text": "how"
+   },
+   {
+    "key": "C",
+    "text": "low"
+   },
+   {
+    "key": "D",
+    "text": "now"
+   }
+  ],
+  "explanation": "参考答案：C"
+ },
+ "en2025-4": {
+  "question": "选出划线部分读音与其他三个不同的一项：\nA. tooth / B. smooth / C. wealth / D. truth",
+  "options": [
+   {
+    "key": "A",
+    "text": "tooth"
+   },
+   {
+    "key": "B",
+    "text": "smooth"
+   },
+   {
+    "key": "C",
+    "text": "wealth"
+   },
+   {
+    "key": "D",
+    "text": "truth"
+   }
+  ],
+  "explanation": "参考答案：B"
+ },
+ "en2025-5": {
+  "question": "选出划线部分读音与其他三个不同的一项：\nA. answer / B. absence / C. escape / D. disease",
+  "options": [
+   {
+    "key": "A",
+    "text": "answer"
+   },
+   {
+    "key": "B",
+    "text": "absence"
+   },
+   {
+    "key": "C",
+    "text": "escape"
+   },
+   {
+    "key": "D",
+    "text": "disease"
+   }
+  ],
+  "explanation": "参考答案：D"
+ },
+ "en2025-6": {
+  "question": "Let's celebrate the victory of our team in the sports meeting, ______?",
+  "options": [
+   {
+    "key": "A",
+    "text": "do you"
+   },
+   {
+    "key": "B",
+    "text": "do we"
+   },
+   {
+    "key": "C",
+    "text": "will you"
+   },
+   {
+    "key": "D",
+    "text": "shall we"
+   }
+  ],
+  "explanation": "参考答案：D"
+ },
+ "en2025-7": {
+  "question": "______ is late for the examination will not be allowed to enter the classroom.",
+  "options": [
+   {
+    "key": "A",
+    "text": "Whoever"
+   },
+   {
+    "key": "B",
+    "text": "Who"
+   },
+   {
+    "key": "C",
+    "text": "Whom"
+   },
+   {
+    "key": "D",
+    "text": "No matter who"
+   }
+  ],
+  "explanation": "参考答案：A"
+ },
+ "en2025-8": {
+  "question": "______ the project on time, they had to work late into the night for several days.",
+  "options": [
+   {
+    "key": "A",
+    "text": "Complete"
+   },
+   {
+    "key": "B",
+    "text": "Completed"
+   },
+   {
+    "key": "C",
+    "text": "To complete"
+   },
+   {
+    "key": "D",
+    "text": "Completing"
+   }
+  ],
+  "explanation": "参考答案：C"
+ },
+ "en2025-9": {
+  "question": "— Where do you usually have your hair ______?\n— At the barber's near the grocery.",
+  "options": [
+   {
+    "key": "A",
+    "text": "cut"
+   },
+   {
+    "key": "B",
+    "text": "be cut"
+   },
+   {
+    "key": "C",
+    "text": "cutting"
+   },
+   {
+    "key": "D",
+    "text": "to cut"
+   }
+  ],
+  "explanation": "参考答案：A"
+ },
+ "en2025-10": {
+  "question": "In the digital era, it is very important not to ______ personal information on the Internet.",
+  "options": [
+   {
+    "key": "A",
+    "text": "try out"
+   },
+   {
+    "key": "B",
+    "text": "give out"
+   },
+   {
+    "key": "C",
+    "text": "pick out"
+   },
+   {
+    "key": "D",
+    "text": "keep out"
+   }
+  ],
+  "explanation": "参考答案：B"
+ },
+ "en2025-11": {
+  "question": "With more colleagues to help you with the task, you will be relieved ______ pressure.",
+  "options": [
+   {
+    "key": "A",
+    "text": "by"
+   },
+   {
+    "key": "B",
+    "text": "of"
+   },
+   {
+    "key": "C",
+    "text": "against"
+   },
+   {
+    "key": "D",
+    "text": "to"
+   }
+  ],
+  "explanation": "参考答案：B"
+ },
+ "en2025-12": {
+  "question": "I cannot afford a dinner in that fancy restaurant. Let's try a ______ expensive one.",
+  "options": [
+   {
+    "key": "A",
+    "text": "most"
+   },
+   {
+    "key": "B",
+    "text": "more"
+   },
+   {
+    "key": "C",
+    "text": "least"
+   },
+   {
+    "key": "D",
+    "text": "less"
+   }
+  ],
+  "explanation": "参考答案：D"
+ },
+ "en2025-13": {
+  "question": "Writing poetry about country life ______ her from the boredom of everyday life.",
+  "options": [
+   {
+    "key": "A",
+    "text": "reminded"
+   },
+   {
+    "key": "B",
+    "text": "benefited"
+   },
+   {
+    "key": "C",
+    "text": "liberated"
+   },
+   {
+    "key": "D",
+    "text": "persuaded"
+   }
+  ],
+  "explanation": "参考答案：C"
+ },
+ "en2025-14": {
+  "question": "______ there was no obvious evidence against him, most people thought he was guilty.",
+  "options": [
+   {
+    "key": "A",
+    "text": "Unless"
+   },
+   {
+    "key": "B",
+    "text": "If"
+   },
+   {
+    "key": "C",
+    "text": "While"
+   },
+   {
+    "key": "D",
+    "text": "Because"
+   }
+  ],
+  "explanation": "参考答案：C"
+ },
+ "en2025-15": {
+  "question": "He ______ at the company for five years before he was promoted to a management position.",
+  "options": [
+   {
+    "key": "A",
+    "text": "had worked"
+   },
+   {
+    "key": "B",
+    "text": "has worked"
+   },
+   {
+    "key": "C",
+    "text": "was working"
+   },
+   {
+    "key": "D",
+    "text": "will have worked"
+   }
+  ],
+  "explanation": "参考答案：A"
+ },
+ "en2025-16": {
+  "question": "The decision finally came from the manager ______ all staff should work extra hours.",
+  "options": [
+   {
+    "key": "A",
+    "text": "when"
+   },
+   {
+    "key": "B",
+    "text": "which"
+   },
+   {
+    "key": "C",
+    "text": "what"
+   },
+   {
+    "key": "D",
+    "text": "that"
+   }
+  ],
+  "explanation": "参考答案：D"
+ },
+ "en2025-17": {
+  "question": "Paul's poor performance in the interview was a big ______ to his mother, who had wanted her son to study at Harvard University.",
+  "options": [
+   {
+    "key": "A",
+    "text": "act"
+   },
+   {
+    "key": "B",
+    "text": "blow"
+   },
+   {
+    "key": "C",
+    "text": "sign"
+   },
+   {
+    "key": "D",
+    "text": "air"
+   }
+  ],
+  "explanation": "参考答案：B"
+ },
+ "en2025-18": {
+  "question": "She is the only one in the office ______ can speak English fluently.",
+  "options": [
+   {
+    "key": "A",
+    "text": "which"
+   },
+   {
+    "key": "B",
+    "text": "whose"
+   },
+   {
+    "key": "C",
+    "text": "where"
+   },
+   {
+    "key": "D",
+    "text": "who"
+   }
+  ],
+  "explanation": "参考答案：D"
+ },
+ "en2025-19": {
+  "question": "With the help of the ______ glasses, people now can have a virtual tour of the museums around the world while sitting at home.",
+  "options": [
+   {
+    "key": "A",
+    "text": "smart"
+   },
+   {
+    "key": "B",
+    "text": "neat"
+   },
+   {
+    "key": "C",
+    "text": "mobile"
+   },
+   {
+    "key": "D",
+    "text": "old"
+   }
+  ],
+  "explanation": "参考答案：A"
+ },
+ "en2025-20": {
+  "question": "The doctor strongly recommends that the patient ______ a strict diet to keep healthy.",
+  "options": [
+   {
+    "key": "A",
+    "text": "following"
+   },
+   {
+    "key": "B",
+    "text": "followed"
+   },
+   {
+    "key": "C",
+    "text": "follow"
+   },
+   {
+    "key": "D",
+    "text": "to follow"
+   }
+  ],
+  "explanation": "参考答案：C"
+ },
+ "en2025-21": {
+  "options": [
+   {
+    "key": "A",
+    "text": "up"
+   },
+   {
+    "key": "B",
+    "text": "out"
+   },
+   {
+    "key": "C",
+    "text": "on"
+   },
+   {
+    "key": "D",
+    "text": "by"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：B"
+ },
+ "en2025-22": {
+  "options": [
+   {
+    "key": "A",
+    "text": "argues"
+   },
+   {
+    "key": "B",
+    "text": "recalls"
+   },
+   {
+    "key": "C",
+    "text": "suggests"
+   },
+   {
+    "key": "D",
+    "text": "repeats"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：B"
+ },
+ "en2025-23": {
+  "options": [
+   {
+    "key": "A",
+    "text": "gone"
+   },
+   {
+    "key": "B",
+    "text": "hidden"
+   },
+   {
+    "key": "C",
+    "text": "stayed"
+   },
+   {
+    "key": "D",
+    "text": "looked"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：C"
+ },
+ "en2025-24": {
+  "options": [
+   {
+    "key": "A",
+    "text": "sport"
+   },
+   {
+    "key": "B",
+    "text": "maths"
+   },
+   {
+    "key": "C",
+    "text": "music"
+   },
+   {
+    "key": "D",
+    "text": "art"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：D"
+ },
+ "en2025-25": {
+  "options": [
+   {
+    "key": "A",
+    "text": "another"
+   },
+   {
+    "key": "B",
+    "text": "too"
+   },
+   {
+    "key": "C",
+    "text": "every"
+   },
+   {
+    "key": "D",
+    "text": "so"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：A"
+ },
+ "en2025-26": {
+  "options": [
+   {
+    "key": "A",
+    "text": "although"
+   },
+   {
+    "key": "B",
+    "text": "unless"
+   },
+   {
+    "key": "C",
+    "text": "once"
+   },
+   {
+    "key": "D",
+    "text": "until"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：C"
+ },
+ "en2025-27": {
+  "options": [
+   {
+    "key": "A",
+    "text": "reached"
+   },
+   {
+    "key": "B",
+    "text": "checked"
+   },
+   {
+    "key": "C",
+    "text": "called"
+   },
+   {
+    "key": "D",
+    "text": "moved"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：A"
+ },
+ "en2025-28": {
+  "options": [
+   {
+    "key": "A",
+    "text": "installing"
+   },
+   {
+    "key": "B",
+    "text": "hanging"
+   },
+   {
+    "key": "C",
+    "text": "locating"
+   },
+   {
+    "key": "D",
+    "text": "ranking"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：B"
+ },
+ "en2025-29": {
+  "options": [
+   {
+    "key": "A",
+    "text": "since"
+   },
+   {
+    "key": "B",
+    "text": "ever"
+   },
+   {
+    "key": "C",
+    "text": "just"
+   },
+   {
+    "key": "D",
+    "text": "never"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：D"
+ },
+ "en2025-30": {
+  "options": [
+   {
+    "key": "A",
+    "text": "become"
+   },
+   {
+    "key": "B",
+    "text": "train"
+   },
+   {
+    "key": "C",
+    "text": "find"
+   },
+   {
+    "key": "D",
+    "text": "respect"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：A"
+ },
+ "en2025-31": {
+  "options": [
+   {
+    "key": "A",
+    "text": "duty"
+   },
+   {
+    "key": "B",
+    "text": "impact"
+   },
+   {
+    "key": "C",
+    "text": "fight"
+   },
+   {
+    "key": "D",
+    "text": "hope"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：B"
+ },
+ "en2025-32": {
+  "options": [
+   {
+    "key": "A",
+    "text": "lending"
+   },
+   {
+    "key": "B",
+    "text": "promising"
+   },
+   {
+    "key": "C",
+    "text": "writing"
+   },
+   {
+    "key": "D",
+    "text": "ordering"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：C"
+ },
+ "en2025-33": {
+  "options": [
+   {
+    "key": "A",
+    "text": "similar"
+   },
+   {
+    "key": "B",
+    "text": "previous"
+   },
+   {
+    "key": "C",
+    "text": "secret"
+   },
+   {
+    "key": "D",
+    "text": "vague"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：A"
+ },
+ "en2025-34": {
+  "options": [
+   {
+    "key": "A",
+    "text": "by"
+   },
+   {
+    "key": "B",
+    "text": "among"
+   },
+   {
+    "key": "C",
+    "text": "for"
+   },
+   {
+    "key": "D",
+    "text": "without"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：C"
+ },
+ "en2025-35": {
+  "options": [
+   {
+    "key": "A",
+    "text": "ask"
+   },
+   {
+    "key": "B",
+    "text": "warn"
+   },
+   {
+    "key": "C",
+    "text": "advise"
+   },
+   {
+    "key": "D",
+    "text": "tell"
+   }
+  ],
+  "passage": "For each blank in the following passage, there are four choices marked A, B, C and D. Choose the one that is most suitable and mark your answer by blackening the corresponding letter on the Answer Sheet.\n\nWith over a decade of teaching, Mrs Bishop has many special memories of her students. But one story in particular stands ____(21).\n\n\"I taught Jerushi in 2013,\" Mrs Bishop ____(22). \"She was in Australia alone. Her parents had ____(23) behind in her home country.\" Mrs Bishop supported Jerushi during Year 6 and encouraged her love of ____(24). A year later, she gave Mrs Bishop a beautiful landscape artwork she had painted.\n\nJerushi studied in Australia for ____(25) few years, but Mrs Bishop lost touch with her. ____(26) she went back home. Then, a few years ago, Jerushi ____(27) out to Mrs Bishop. At the time, Jerushi's painting was ____(28) above Mrs Bishop's desk—proof that Mrs Bishop had ____(29) forgotten her. \"Jerushi told me she was now studying to ____(30), a teacher just like me,\" Mrs Bishop says. \"It was a beautiful message. As a teacher, you often don't realise the kind of ____(31) you can have.\"\n\nIt was a full-circle moment for Mrs Bishop, who remembers ____(32) her own teacher a letter five years ago with a ____(33) message, saying she started her teaching career because of him. \"His passion ____(34) teaching really inspired me.\" For Mrs Bishop, teaching is both a pleasure and a privilege. \"When parents thank me, I ____(35) them, 'No, thank you for allowing me to be a part of your child's life.'\"",
+  "explanation": "参考答案：D"
+ },
+ "en2025-36": {
+  "question": "What did the author and his friend do in the bar?",
+  "options": [
+   {
+    "key": "A",
+    "text": "They recalled their time in Thailand."
+   },
+   {
+    "key": "B",
+    "text": "They shared experiences in Colorado."
+   },
+   {
+    "key": "C",
+    "text": "They talked about the joy of graduation."
+   },
+   {
+    "key": "D",
+    "text": "They exchanged views on career success."
+   }
+  ],
+  "passage": "Last week, a friend from Colorado, who I first met in Thailand, came into town for his sister's graduation. He called me and we met up in a bar. It was one of the best nights of the summer.\n\nWe retold stories from our time in Thailand, drank a couple beers, and just reflected in the presence of one another. And the best part: he was doing well, succeeding in life while pursuing his dreams.\n\nOn my way home from seeing him on his last night in town, I got a little depressed. I just forgot how much fun I had with him and why he made my Thailand experience so awesome. And that of course got me missing all my friends: the ones still in Santa Clara, the ones following their music careers, the ones living in Portland that I have just been too dumb to contact. I have just been so caught up in writing, studying for the GRE, lounging about my house, that I haven't made the effort that I certainly should have.\n\nSometimes, we get so absorbed in our own lives that we forget what makes our lives worth living. Humans are social creatures. It is in our DNA. Evolutionary psychologists suggest that because we relied upon social groups in primitive times to survive, we have a negative biological reaction to loneliness today.\n\nSo go out there and contact a friend you haven't talked to for a while. If nothing else, just check in to see how they're doing. Because even if you haven't spoken for a while, I'm certain that they are thinking of you.",
+  "explanation": "参考答案：A"
+ },
+ "en2025-37": {
+  "question": "What can be inferred about the author from Paragraph 3?",
+  "options": [
+   {
+    "key": "A",
+    "text": "He has achieved success in writing."
+   },
+   {
+    "key": "B",
+    "text": "He has got a high score on the GRE."
+   },
+   {
+    "key": "C",
+    "text": "He does not enjoy his life in Portland."
+   },
+   {
+    "key": "D",
+    "text": "He regrets not having seen his friends."
+   }
+  ],
+  "passage": "Last week, a friend from Colorado, who I first met in Thailand, came into town for his sister's graduation. He called me and we met up in a bar. It was one of the best nights of the summer.\n\nWe retold stories from our time in Thailand, drank a couple beers, and just reflected in the presence of one another. And the best part: he was doing well, succeeding in life while pursuing his dreams.\n\nOn my way home from seeing him on his last night in town, I got a little depressed. I just forgot how much fun I had with him and why he made my Thailand experience so awesome. And that of course got me missing all my friends: the ones still in Santa Clara, the ones following their music careers, the ones living in Portland that I have just been too dumb to contact. I have just been so caught up in writing, studying for the GRE, lounging about my house, that I haven't made the effort that I certainly should have.\n\nSometimes, we get so absorbed in our own lives that we forget what makes our lives worth living. Humans are social creatures. It is in our DNA. Evolutionary psychologists suggest that because we relied upon social groups in primitive times to survive, we have a negative biological reaction to loneliness today.\n\nSo go out there and contact a friend you haven't talked to for a while. If nothing else, just check in to see how they're doing. Because even if you haven't spoken for a while, I'm certain that they are thinking of you.",
+  "explanation": "根据文章第三段第一句可知，作者有点儿沮丧，接下来作者给出了沮丧的原因，即作者在与朋友见面后，因回忆起往日的快乐而感到失落，并对自己因忙碌而疏于联系朋友感到后悔与自责。由此可推断，作者后悔没有见他的朋友们。故选D。"
+ },
+ "en2025-38": {
+  "question": "What is a cause of humans' negative biological reaction to loneliness?",
+  "options": [
+   {
+    "key": "A",
+    "text": "The requirement of family groups."
+   },
+   {
+    "key": "B",
+    "text": "The dependence on social support."
+   },
+   {
+    "key": "C",
+    "text": "The destruction of the environment."
+   },
+   {
+    "key": "D",
+    "text": "The improvement of living conditions."
+   }
+  ],
+  "passage": "Last week, a friend from Colorado, who I first met in Thailand, came into town for his sister's graduation. He called me and we met up in a bar. It was one of the best nights of the summer.\n\nWe retold stories from our time in Thailand, drank a couple beers, and just reflected in the presence of one another. And the best part: he was doing well, succeeding in life while pursuing his dreams.\n\nOn my way home from seeing him on his last night in town, I got a little depressed. I just forgot how much fun I had with him and why he made my Thailand experience so awesome. And that of course got me missing all my friends: the ones still in Santa Clara, the ones following their music careers, the ones living in Portland that I have just been too dumb to contact. I have just been so caught up in writing, studying for the GRE, lounging about my house, that I haven't made the effort that I certainly should have.\n\nSometimes, we get so absorbed in our own lives that we forget what makes our lives worth living. Humans are social creatures. It is in our DNA. Evolutionary psychologists suggest that because we relied upon social groups in primitive times to survive, we have a negative biological reaction to loneliness today.\n\nSo go out there and contact a friend you haven't talked to for a while. If nothing else, just check in to see how they're doing. Because even if you haven't spoken for a while, I'm certain that they are thinking of you.",
+  "explanation": "根据文章第四段最后一句可知，进化心理学家认为，由于我们在原始时代依赖社会群体生存，因此如今孤独会引起消极的生理反应。由此可推断，人们对社会支持的依赖导致人类对孤独产生了消极的生理反应。故选B。"
+ },
+ "en2025-39": {
+  "question": "What does the author suggest in the passage?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Offering timely help to friends."
+   },
+   {
+    "key": "B",
+    "text": "Keeping in contact with friends."
+   },
+   {
+    "key": "C",
+    "text": "Relying on friends for social success."
+   },
+   {
+    "key": "D",
+    "text": "Caring for friends' career development."
+   }
+  ],
+  "passage": "Last week, a friend from Colorado, who I first met in Thailand, came into town for his sister's graduation. He called me and we met up in a bar. It was one of the best nights of the summer.\n\nWe retold stories from our time in Thailand, drank a couple beers, and just reflected in the presence of one another. And the best part: he was doing well, succeeding in life while pursuing his dreams.\n\nOn my way home from seeing him on his last night in town, I got a little depressed. I just forgot how much fun I had with him and why he made my Thailand experience so awesome. And that of course got me missing all my friends: the ones still in Santa Clara, the ones following their music careers, the ones living in Portland that I have just been too dumb to contact. I have just been so caught up in writing, studying for the GRE, lounging about my house, that I haven't made the effort that I certainly should have.\n\nSometimes, we get so absorbed in our own lives that we forget what makes our lives worth living. Humans are social creatures. It is in our DNA. Evolutionary psychologists suggest that because we relied upon social groups in primitive times to survive, we have a negative biological reaction to loneliness today.\n\nSo go out there and contact a friend you haven't talked to for a while. If nothing else, just check in to see how they're doing. Because even if you haven't spoken for a while, I'm certain that they are thinking of you.",
+  "explanation": "文章最后一段提到，去联系一位许久未交谈的朋友吧，如果没什么特别的事，就去问候一下他们的近况吧。由此可知，作者建议读者与朋友们保持联系。故选B。"
+ },
+ "en2025-40": {
+  "question": "What troubles the Australian National Maritime Museum?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Shortage of staff."
+   },
+   {
+    "key": "B",
+    "text": "Pollution of water."
+   },
+   {
+    "key": "C",
+    "text": "Bird droppings."
+   },
+   {
+    "key": "D",
+    "text": "Long workdays."
+   }
+  ],
+  "passage": "Seagulls(海鸥) don't just steal food from tourists; they also make quite a mess on the boats of the Australian National Maritime Museum. Seagull droppings stain the boats, causing the museum staff to spend many hours cleaning up the mess left by the seagulls.\n\nAfter many failed attempts at keeping the annoying seagulls away, the staff had a brilliant idea. Inspired by the method used at various airports to drive away wildlife, they sought out the Australian Dog Working Centre and adopted Bailey. The three-year-old dog was appointed the new position of Assistant Director of Seagulls and put to work.\n\nThe highlight of Bailey's morning is chasing the seagulls away from the boats. For the first few weeks, Bailey was a little too enthusiastic about his new role and managed to jump into the water during the pursuit of seagulls. But it wasn't long before he was fitted with a new work uniform—a bright yellow life vest that keeps him floating on water. Bailey even has a special staff ID with his photo and the title of his important position. He has had to get familiar with the museum's waterfront, which he patrols(巡查) frequently. This is especially important at night when there is no human activity around to scare the seagulls off.\n\nThe museum staff members are all very fond of Bailey, making sure to give him lots of playtime, walks and affection. He is very well taken care of, with visits to the local animal doctor for grooming(梳毛) scheduled every two weeks.\n\nWhen he is clocked on, Bailey prefers not to be disturbed so he can focus on his job. However, when he is not working, the museum encourages all visitors to come to say hello to their special employee. So the next time you visit the museum, make sure to say hello to this hardworking dog!",
+  "explanation": "文章第一段最后一句提到，海鸥的排泄物弄脏了船，导致博物馆工作人员花费大量时间清理海鸥留下的排泄物。由此可知，鸟类的排泄物让澳大利亚国家海事博物馆很困扰。故选C。"
+ },
+ "en2025-41": {
+  "question": "What is Bailey's job at the museum?",
+  "options": [
+   {
+    "key": "A",
+    "text": "To catch thieves."
+   },
+   {
+    "key": "B",
+    "text": "To inspect visitors."
+   },
+   {
+    "key": "C",
+    "text": "To perform on the boats."
+   },
+   {
+    "key": "D",
+    "text": "To chase away seagulls."
+   }
+  ],
+  "passage": "Seagulls(海鸥) don't just steal food from tourists; they also make quite a mess on the boats of the Australian National Maritime Museum. Seagull droppings stain the boats, causing the museum staff to spend many hours cleaning up the mess left by the seagulls.\n\nAfter many failed attempts at keeping the annoying seagulls away, the staff had a brilliant idea. Inspired by the method used at various airports to drive away wildlife, they sought out the Australian Dog Working Centre and adopted Bailey. The three-year-old dog was appointed the new position of Assistant Director of Seagulls and put to work.\n\nThe highlight of Bailey's morning is chasing the seagulls away from the boats. For the first few weeks, Bailey was a little too enthusiastic about his new role and managed to jump into the water during the pursuit of seagulls. But it wasn't long before he was fitted with a new work uniform—a bright yellow life vest that keeps him floating on water. Bailey even has a special staff ID with his photo and the title of his important position. He has had to get familiar with the museum's waterfront, which he patrols(巡查) frequently. This is especially important at night when there is no human activity around to scare the seagulls off.\n\nThe museum staff members are all very fond of Bailey, making sure to give him lots of playtime, walks and affection. He is very well taken care of, with visits to the local animal doctor for grooming(梳毛) scheduled every two weeks.\n\nWhen he is clocked on, Bailey prefers not to be disturbed so he can focus on his job. However, when he is not working, the museum encourages all visitors to come to say hello to their special employee. So the next time you visit the museum, make sure to say hello to this hardworking dog!",
+  "explanation": "文章第二段最后一句提到贝利被任命为“海鸥事务助理总监”，第三段第一句提到贝利早上的工作重点是把海鸥从船上赶走。由此可知，贝利在博物馆的工作是驱赶海鸥。故选D。"
+ },
+ "en2025-42": {
+  "question": "Which of the following is true about Bailey?",
+  "options": [
+   {
+    "key": "A",
+    "text": "He receives regular body care."
+   },
+   {
+    "key": "B",
+    "text": "He is often disturbed by tourists."
+   },
+   {
+    "key": "C",
+    "text": "He enjoys working instead of playing."
+   },
+   {
+    "key": "D",
+    "text": "He becomes the symbol of the museum."
+   }
+  ],
+  "passage": "Seagulls(海鸥) don't just steal food from tourists; they also make quite a mess on the boats of the Australian National Maritime Museum. Seagull droppings stain the boats, causing the museum staff to spend many hours cleaning up the mess left by the seagulls.\n\nAfter many failed attempts at keeping the annoying seagulls away, the staff had a brilliant idea. Inspired by the method used at various airports to drive away wildlife, they sought out the Australian Dog Working Centre and adopted Bailey. The three-year-old dog was appointed the new position of Assistant Director of Seagulls and put to work.\n\nThe highlight of Bailey's morning is chasing the seagulls away from the boats. For the first few weeks, Bailey was a little too enthusiastic about his new role and managed to jump into the water during the pursuit of seagulls. But it wasn't long before he was fitted with a new work uniform—a bright yellow life vest that keeps him floating on water. Bailey even has a special staff ID with his photo and the title of his important position. He has had to get familiar with the museum's waterfront, which he patrols(巡查) frequently. This is especially important at night when there is no human activity around to scare the seagulls off.\n\nThe museum staff members are all very fond of Bailey, making sure to give him lots of playtime, walks and affection. He is very well taken care of, with visits to the local animal doctor for grooming(梳毛) scheduled every two weeks.\n\nWhen he is clocked on, Bailey prefers not to be disturbed so he can focus on his job. However, when he is not working, the museum encourages all visitors to come to say hello to their special employee. So the next time you visit the museum, make sure to say hello to this hardworking dog!",
+  "explanation": "文章第四段第二句提到，贝利得到了很好的照顾，每两周就会由当地的动物医生为其梳毛。由此可知，贝利定期接受身体护理。故选A。"
+ },
+ "en2025-43": {
+  "question": "Which of the following is closest in meaning to the underlined expression \"clocked on\" in the last paragraph?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Off duty."
+   },
+   {
+    "key": "B",
+    "text": "In bed."
+   },
+   {
+    "key": "C",
+    "text": "Under control."
+   },
+   {
+    "key": "D",
+    "text": "At work."
+   }
+  ],
+  "passage": "Seagulls(海鸥) don't just steal food from tourists; they also make quite a mess on the boats of the Australian National Maritime Museum. Seagull droppings stain the boats, causing the museum staff to spend many hours cleaning up the mess left by the seagulls.\n\nAfter many failed attempts at keeping the annoying seagulls away, the staff had a brilliant idea. Inspired by the method used at various airports to drive away wildlife, they sought out the Australian Dog Working Centre and adopted Bailey. The three-year-old dog was appointed the new position of Assistant Director of Seagulls and put to work.\n\nThe highlight of Bailey's morning is chasing the seagulls away from the boats. For the first few weeks, Bailey was a little too enthusiastic about his new role and managed to jump into the water during the pursuit of seagulls. But it wasn't long before he was fitted with a new work uniform—a bright yellow life vest that keeps him floating on water. Bailey even has a special staff ID with his photo and the title of his important position. He has had to get familiar with the museum's waterfront, which he patrols(巡查) frequently. This is especially important at night when there is no human activity around to scare the seagulls off.\n\nThe museum staff members are all very fond of Bailey, making sure to give him lots of playtime, walks and affection. He is very well taken care of, with visits to the local animal doctor for grooming(梳毛) scheduled every two weeks.\n\nWhen he is clocked on, Bailey prefers not to be disturbed so he can focus on his job. However, when he is not working, the museum encourages all visitors to come to say hello to their special employee. So the next time you visit the museum, make sure to say hello to this hardworking dog!",
+  "explanation": "文章最后一段第一句提到，当贝利______时，贝利不喜欢被打扰，以便专心工作。由此可推断，clock on 意为“打卡上班”，与下文的 when he is not working（当他不工作的时候）相呼应。off duty 意为“下班”；in bed 意为“在床上”；under control 意为“处于控制之下”；at work 意为“在工作”。故选D。"
+ },
+ "en2025-44": {
+  "question": "Which factor is mainly talked about in Paragraph 2?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Fuel."
+   },
+   {
+    "key": "B",
+    "text": "Wind."
+   },
+   {
+    "key": "C",
+    "text": "Slope."
+   },
+   {
+    "key": "D",
+    "text": "Flame."
+   }
+  ],
+  "passage": "The recent wildfire in Alberta, Canada, has already burned through 600 square miles of land, and 20% of houses in the city of Fort McMurray; all its 88,000 residents have left their homes. But how do you put out fires this big and intense?\n\nWind, fuel and the slope(坡度) of the land are three vital factors. You can't do very much about the first one. The firefighters will be paying attention to weather conditions. In an ideal world, the wind would force the flames back on to ground that has already been burned.\n\nFuel—mainly the trees—can be managed in several ways, such as bulldozing(铲除) it out of the way or starting controlled fires to burn it off so it can't feed the main fire.\n\nThe slope of the land can also help. Fires burn much more aggressively going uphill than they do downhill. You don't try to fight a fire going uphill. The firefighters will be looking very carefully how they arrange their personnel and equipment on a downhill side of a slope. In a fire that is relatively small and moving downhill, you can launch a direct attack, physically beating the flames out with special tools. You would come in behind the fire, so you're not face to face with flames coming towards you.\n\nIn addition, fire can spread a large distance away from the fire-front by burning embers(余火) carried on the wind, which then start other fires elsewhere. You can actively work on preventing parts of the fire going in certain directions. But this requires resources, such as water bombers—planes that can dump vast quantities of water. They aren't just flying over the top of the fire and releasing water. They usually wet the fuel ahead of the fire or along its sides to stop the spread of the fire.",
+  "explanation": "文章第二段提到，风、燃料和地面坡度是三个关键因素，人们对第一个因素几乎无能为力。消防员会密切关注天气状况。理想情况下，风会将火焰吹回已经烧过的区域。由此可知，本段主要讨论的是“Wind(风)”。故选B。"
+ },
+ "en2025-45": {
+  "question": "Why should trees be bulldozed in firefighting?",
+  "options": [
+   {
+    "key": "A",
+    "text": "To put out a controlled fire."
+   },
+   {
+    "key": "B",
+    "text": "To help the victims escape."
+   },
+   {
+    "key": "C",
+    "text": "To prevent fires from spreading."
+   },
+   {
+    "key": "D",
+    "text": "To make way for firefighters."
+   }
+  ],
+  "passage": "The recent wildfire in Alberta, Canada, has already burned through 600 square miles of land, and 20% of houses in the city of Fort McMurray; all its 88,000 residents have left their homes. But how do you put out fires this big and intense?\n\nWind, fuel and the slope(坡度) of the land are three vital factors. You can't do very much about the first one. The firefighters will be paying attention to weather conditions. In an ideal world, the wind would force the flames back on to ground that has already been burned.\n\nFuel—mainly the trees—can be managed in several ways, such as bulldozing(铲除) it out of the way or starting controlled fires to burn it off so it can't feed the main fire.\n\nThe slope of the land can also help. Fires burn much more aggressively going uphill than they do downhill. You don't try to fight a fire going uphill. The firefighters will be looking very carefully how they arrange their personnel and equipment on a downhill side of a slope. In a fire that is relatively small and moving downhill, you can launch a direct attack, physically beating the flames out with special tools. You would come in behind the fire, so you're not face to face with flames coming towards you.\n\nIn addition, fire can spread a large distance away from the fire-front by burning embers(余火) carried on the wind, which then start other fires elsewhere. You can actively work on preventing parts of the fire going in certain directions. But this requires resources, such as water bombers—planes that can dump vast quantities of water. They aren't just flying over the top of the fire and releasing water. They usually wet the fuel ahead of the fire or along its sides to stop the spread of the fire.",
+  "explanation": "文章第三段提到，燃料（主要是树木）可通过推土机铲除或可控燃烧等方式处理，目的是使其不能助长火势。由此可知，在灭火时铲除树木是为了防止火势蔓延。故选C。"
+ },
+ "en2025-46": {
+  "question": "When can firefighters directly attack a fire?",
+  "options": [
+   {
+    "key": "A",
+    "text": "When it is small and moving downhill."
+   },
+   {
+    "key": "B",
+    "text": "When it is big and moving sideways."
+   },
+   {
+    "key": "C",
+    "text": "When water bombers are available."
+   },
+   {
+    "key": "D",
+    "text": "When the trees ahead of it are wet."
+   }
+  ],
+  "passage": "The recent wildfire in Alberta, Canada, has already burned through 600 square miles of land, and 20% of houses in the city of Fort McMurray; all its 88,000 residents have left their homes. But how do you put out fires this big and intense?\n\nWind, fuel and the slope(坡度) of the land are three vital factors. You can't do very much about the first one. The firefighters will be paying attention to weather conditions. In an ideal world, the wind would force the flames back on to ground that has already been burned.\n\nFuel—mainly the trees—can be managed in several ways, such as bulldozing(铲除) it out of the way or starting controlled fires to burn it off so it can't feed the main fire.\n\nThe slope of the land can also help. Fires burn much more aggressively going uphill than they do downhill. You don't try to fight a fire going uphill. The firefighters will be looking very carefully how they arrange their personnel and equipment on a downhill side of a slope. In a fire that is relatively small and moving downhill, you can launch a direct attack, physically beating the flames out with special tools. You would come in behind the fire, so you're not face to face with flames coming towards you.\n\nIn addition, fire can spread a large distance away from the fire-front by burning embers(余火) carried on the wind, which then start other fires elsewhere. You can actively work on preventing parts of the fire going in certain directions. But this requires resources, such as water bombers—planes that can dump vast quantities of water. They aren't just flying over the top of the fire and releasing water. They usually wet the fuel ahead of the fire or along its sides to stop the spread of the fire.",
+  "explanation": "根据文章第四段第五句可知，对于相对较小且向下坡蔓延的火势，可以采取直接灭火的方法，使用专门的工具将火焰扑灭。故选A。"
+ },
+ "en2025-47": {
+  "question": "Which of the following is closest in meaning to the underlined word \"dump\" in the last paragraph?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Drop."
+   },
+   {
+    "key": "B",
+    "text": "Boil."
+   },
+   {
+    "key": "C",
+    "text": "Absorb."
+   },
+   {
+    "key": "D",
+    "text": "Produce."
+   }
+  ],
+  "passage": "The recent wildfire in Alberta, Canada, has already burned through 600 square miles of land, and 20% of houses in the city of Fort McMurray; all its 88,000 residents have left their homes. But how do you put out fires this big and intense?\n\nWind, fuel and the slope(坡度) of the land are three vital factors. You can't do very much about the first one. The firefighters will be paying attention to weather conditions. In an ideal world, the wind would force the flames back on to ground that has already been burned.\n\nFuel—mainly the trees—can be managed in several ways, such as bulldozing(铲除) it out of the way or starting controlled fires to burn it off so it can't feed the main fire.\n\nThe slope of the land can also help. Fires burn much more aggressively going uphill than they do downhill. You don't try to fight a fire going uphill. The firefighters will be looking very carefully how they arrange their personnel and equipment on a downhill side of a slope. In a fire that is relatively small and moving downhill, you can launch a direct attack, physically beating the flames out with special tools. You would come in behind the fire, so you're not face to face with flames coming towards you.\n\nIn addition, fire can spread a large distance away from the fire-front by burning embers(余火) carried on the wind, which then start other fires elsewhere. You can actively work on preventing parts of the fire going in certain directions. But this requires resources, such as water bombers—planes that can dump vast quantities of water. They aren't just flying over the top of the fire and releasing water. They usually wet the fuel ahead of the fire or along its sides to stop the spread of the fire.",
+  "explanation": "文章最后一段最后三句提到，灭火飞机可以______大量水。它们不仅仅是飞越火场上空洒水。通常它们会提前浇湿火势前方的燃料或火场两侧区域，以阻止火势蔓延。由此可推断，dump 意为“倾倒”。drop 意为“使落下”；boil 意为“煮沸”；absorb 意为“吸收”；produce 意为“生产、制造”。故选A。"
+ },
+ "en2025-48": {
+  "question": "What problem is Pittsburgh Arlington trying to solve?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Outdated school facilities."
+   },
+   {
+    "key": "B",
+    "text": "Little support for teachers."
+   },
+   {
+    "key": "C",
+    "text": "Frequent absence of students."
+   },
+   {
+    "key": "D",
+    "text": "Lack of money for programs."
+   }
+  ],
+  "passage": "Pittsburgh Arlington, an elementary school in the state of Pennsylvania, is battling chronic absence from school with a community-centered approach that combines care, connection, and practical support. Over half of the school's 353 students frequently miss classes. Many of these students face barriers like a lack of transportation, which the school district does not provide for those living less than a mile and a half away.\n\nTo tackle this issue, the school worked with the Brashear Association, a local nonprofit, to launch the nanas(保姆) program. This initiative provides a personal touch, where nanas make cheerful morning wake-up calls to families, often ending the conversation with a heartfelt \"I love you.\" In addition, the program offers free bus rides to and from school, ensuring that children who might otherwise miss school can attend regularly.\n\nThe program currently serves 36 children daily, but demand is high, with about 20 students still on the waitlist. Principal Crystal Caldwell wishes there were more resources to expand the service. Meanwhile, the school is also working on other solutions, like paying staff to walk students home and working together with a nearby church to offer before-school care.\n\nThese efforts are part of a broader initiative aiming at making school a friendly and desirable place for students. This includes working with local arts organizations to create interesting programs and offering regular motivational talks to encourage attendance(出勤). These combined efforts reflect a deep understanding that the causes are complex and varied, requiring the entire community's involvement to address them effectively.\n\nTiffini Gorman, director of partnerships at the nonprofit A+ Schools, emphasizes the importance of collective responsibility in ensuring that every child has the support they need to succeed. The school's approach highlights the significance of community involvement in creating a positive and supportive environment for students.",
+  "explanation": "根据文章第一段第一句可知，匹兹堡阿灵顿小学正在通过一种以社区为中心的方法来应对学生长期缺勤的问题。故选C。"
+ },
+ "en2025-49": {
+  "question": "What measure does the nanas program take to help students come to school?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Shortening school days."
+   },
+   {
+    "key": "B",
+    "text": "Giving financial rewards."
+   },
+   {
+    "key": "C",
+    "text": "Providing free bus rides."
+   },
+   {
+    "key": "D",
+    "text": "Offering choices of transportation."
+   }
+  ],
+  "passage": "Pittsburgh Arlington, an elementary school in the state of Pennsylvania, is battling chronic absence from school with a community-centered approach that combines care, connection, and practical support. Over half of the school's 353 students frequently miss classes. Many of these students face barriers like a lack of transportation, which the school district does not provide for those living less than a mile and a half away.\n\nTo tackle this issue, the school worked with the Brashear Association, a local nonprofit, to launch the nanas(保姆) program. This initiative provides a personal touch, where nanas make cheerful morning wake-up calls to families, often ending the conversation with a heartfelt \"I love you.\" In addition, the program offers free bus rides to and from school, ensuring that children who might otherwise miss school can attend regularly.\n\nThe program currently serves 36 children daily, but demand is high, with about 20 students still on the waitlist. Principal Crystal Caldwell wishes there were more resources to expand the service. Meanwhile, the school is also working on other solutions, like paying staff to walk students home and working together with a nearby church to offer before-school care.\n\nThese efforts are part of a broader initiative aiming at making school a friendly and desirable place for students. This includes working with local arts organizations to create interesting programs and offering regular motivational talks to encourage attendance(出勤). These combined efforts reflect a deep understanding that the causes are complex and varied, requiring the entire community's involvement to address them effectively.\n\nTiffini Gorman, director of partnerships at the nonprofit A+ Schools, emphasizes the importance of collective responsibility in ensuring that every child has the support they need to succeed. The school's approach highlights the significance of community involvement in creating a positive and supportive environment for students.",
+  "explanation": "根据文章第二段最后一句可知，“保姆计划”还提供往返学校的免费巴士接送服务，确保那些原本可能缺勤的学生能够正常出勤。故选C。"
+ },
+ "en2025-50": {
+  "question": "What does the underlined word \"This\" in Paragraph 4 refer to?",
+  "options": [
+   {
+    "key": "A",
+    "text": "A quicker solution."
+   },
+   {
+    "key": "B",
+    "text": "A broader initiative."
+   },
+   {
+    "key": "C",
+    "text": "Collective responsibility."
+   },
+   {
+    "key": "D",
+    "text": "Community involvement."
+   }
+  ],
+  "passage": "Pittsburgh Arlington, an elementary school in the state of Pennsylvania, is battling chronic absence from school with a community-centered approach that combines care, connection, and practical support. Over half of the school's 353 students frequently miss classes. Many of these students face barriers like a lack of transportation, which the school district does not provide for those living less than a mile and a half away.\n\nTo tackle this issue, the school worked with the Brashear Association, a local nonprofit, to launch the nanas(保姆) program. This initiative provides a personal touch, where nanas make cheerful morning wake-up calls to families, often ending the conversation with a heartfelt \"I love you.\" In addition, the program offers free bus rides to and from school, ensuring that children who might otherwise miss school can attend regularly.\n\nThe program currently serves 36 children daily, but demand is high, with about 20 students still on the waitlist. Principal Crystal Caldwell wishes there were more resources to expand the service. Meanwhile, the school is also working on other solutions, like paying staff to walk students home and working together with a nearby church to offer before-school care.\n\nThese efforts are part of a broader initiative aiming at making school a friendly and desirable place for students. This includes working with local arts organizations to create interesting programs and offering regular motivational talks to encourage attendance(出勤). These combined efforts reflect a deep understanding that the causes are complex and varied, requiring the entire community's involvement to address them effectively.\n\nTiffini Gorman, director of partnerships at the nonprofit A+ Schools, emphasizes the importance of collective responsibility in ensuring that every child has the support they need to succeed. The school's approach highlights the significance of community involvement in creating a positive and supportive environment for students.",
+  "explanation": "文章第四段前两句提到，这些举措是一项更大规模的计划的一部分，旨在使学校成为一个对学生友好且有吸引力的地方。这包括与当地艺术组织合作设置有趣的课程，以及定期举办励志讲座来鼓励出勤。由此可推断，“This”指代的就是上文提到的“a broader initiative（更大规模的计划）”。故选B。"
+ },
+ "en2025-51": {
+  "question": "What would be the best title for this passage?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Nanas help find a new approach to teaching art"
+   },
+   {
+    "key": "B",
+    "text": "Pittsburgh Arlington: the rebirth of an old school"
+   },
+   {
+    "key": "C",
+    "text": "Students drop out of school: a big problem today"
+   },
+   {
+    "key": "D",
+    "text": "Working together to get kids back into the classroom"
+   }
+  ],
+  "passage": "Pittsburgh Arlington, an elementary school in the state of Pennsylvania, is battling chronic absence from school with a community-centered approach that combines care, connection, and practical support. Over half of the school's 353 students frequently miss classes. Many of these students face barriers like a lack of transportation, which the school district does not provide for those living less than a mile and a half away.\n\nTo tackle this issue, the school worked with the Brashear Association, a local nonprofit, to launch the nanas(保姆) program. This initiative provides a personal touch, where nanas make cheerful morning wake-up calls to families, often ending the conversation with a heartfelt \"I love you.\" In addition, the program offers free bus rides to and from school, ensuring that children who might otherwise miss school can attend regularly.\n\nThe program currently serves 36 children daily, but demand is high, with about 20 students still on the waitlist. Principal Crystal Caldwell wishes there were more resources to expand the service. Meanwhile, the school is also working on other solutions, like paying staff to walk students home and working together with a nearby church to offer before-school care.\n\nThese efforts are part of a broader initiative aiming at making school a friendly and desirable place for students. This includes working with local arts organizations to create interesting programs and offering regular motivational talks to encourage attendance(出勤). These combined efforts reflect a deep understanding that the causes are complex and varied, requiring the entire community's involvement to address them effectively.\n\nTiffini Gorman, director of partnerships at the nonprofit A+ Schools, emphasizes the importance of collective responsibility in ensuring that every child has the support they need to succeed. The school's approach highlights the significance of community involvement in creating a positive and supportive environment for students.",
+  "explanation": "通读全文可知，文章围绕匹兹堡阿灵顿小学联合社区力量、采取多项措施（如“保姆计划”、免费校车等）解决学生缺勤问题，强调解决复杂社会问题需要学校、家庭及社区的共同参与和支持。D项（共同努力让孩子们重返课堂）最能概括文章的主旨大意，最适合作为文章的标题。故选D。"
+ },
+ "en2025-52": {
+  "question": "Why were people encouraged to participate in the Big Butterfly Count?",
+  "options": [
+   {
+    "key": "A",
+    "text": "To understand anxiety."
+   },
+   {
+    "key": "B",
+    "text": "To connect with others."
+   },
+   {
+    "key": "C",
+    "text": "To find new butterfly species."
+   },
+   {
+    "key": "D",
+    "text": "To help with a science project."
+   }
+  ],
+  "passage": "Counting butterflies can reduce anxiety and boost a sense of connection with nature, a study has found. Researchers surveyed participants in the Big Butterfly Count in 2022, in which wildlife charity Butterfly Conservation encouraged people to spend 15 minutes outside counting butterflies to help scientists track how the insects were faring. Surveys completed by 382 people before and after the three-week count period revealed a 9 per cent reduction in anxiety among participants, and a greater sense of connection with nature, as well as noticing butterflies and nature more.\n\nFurther surveys completed by 345 people, which were sent five weeks after the count, did not find nature connectedness and reduced anxiety had been maintained. But they revealed an increase in general wellbeing compared with before the project. The research, published in the journal Biological Conservation, was carried out by Butterfly Conservation and the University of Derby.\n\nThe surveys revealed people had a range of positive and negative emotions associated with taking part, ranging from joy and fascination to sadness and concern about declining insects. Richard Fox, head of science at Butterfly Conservation, said, \"This study is the first to prove that the simple act of looking for and counting butterflies leads to a decrease in anxiety. The results suggest that citizen science projects can play a part in improving people's mental health, as well as gathering important data on how butterflies are faring to inform our conservation work.\"\n\nCarly Butler, lead researcher on the study, said the benefits of reduced anxiety and stronger connectedness with nature were the same whether people just carried out one 15-minute count or did so multiple times. Dr Butler added that participants felt motivated to help butterflies and nature by doing things such as making their gardens butterfly-friendly.",
+  "explanation": "文章第一段第二句提到，研究人员调查了2022年大型蝴蝶计数活动的参与者，在该活动中，野生动物慈善机构“蝴蝶保护组织”鼓励人们花15分钟在户外数蝴蝶，以帮助科学家追踪这些昆虫的生存状况。由此可知，人们被鼓励参与大型蝴蝶计数活动以助力一项科学研究项目。故选D。"
+ },
+ "en2025-53": {
+  "question": "What did further surveys find?",
+  "options": [
+   {
+    "key": "A",
+    "text": "People had higher general wellbeing."
+   },
+   {
+    "key": "B",
+    "text": "People felt more excited about wildlife."
+   },
+   {
+    "key": "C",
+    "text": "People were closer to the natural world."
+   },
+   {
+    "key": "D",
+    "text": "People were more generous and helpful."
+   }
+  ],
+  "passage": "Counting butterflies can reduce anxiety and boost a sense of connection with nature, a study has found. Researchers surveyed participants in the Big Butterfly Count in 2022, in which wildlife charity Butterfly Conservation encouraged people to spend 15 minutes outside counting butterflies to help scientists track how the insects were faring. Surveys completed by 382 people before and after the three-week count period revealed a 9 per cent reduction in anxiety among participants, and a greater sense of connection with nature, as well as noticing butterflies and nature more.\n\nFurther surveys completed by 345 people, which were sent five weeks after the count, did not find nature connectedness and reduced anxiety had been maintained. But they revealed an increase in general wellbeing compared with before the project. The research, published in the journal Biological Conservation, was carried out by Butterfly Conservation and the University of Derby.\n\nThe surveys revealed people had a range of positive and negative emotions associated with taking part, ranging from joy and fascination to sadness and concern about declining insects. Richard Fox, head of science at Butterfly Conservation, said, \"This study is the first to prove that the simple act of looking for and counting butterflies leads to a decrease in anxiety. The results suggest that citizen science projects can play a part in improving people's mental health, as well as gathering important data on how butterflies are faring to inform our conservation work.\"\n\nCarly Butler, lead researcher on the study, said the benefits of reduced anxiety and stronger connectedness with nature were the same whether people just carried out one 15-minute count or did so multiple times. Dr Butler added that participants felt motivated to help butterflies and nature by doing things such as making their gardens butterfly-friendly.",
+  "explanation": "根据文章第二段第二句可知，后续调查显示，与项目开始前相比，人们的总体幸福感有所提高。故选A。"
+ },
+ "en2025-54": {
+  "question": "What were people concerned about according to the surveys?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Their inability to gather enough data."
+   },
+   {
+    "key": "B",
+    "text": "The decrease in butterfly populations."
+   },
+   {
+    "key": "C",
+    "text": "Their anxiety in doing the surveys."
+   },
+   {
+    "key": "D",
+    "text": "The duration of the counting task."
+   }
+  ],
+  "passage": "Counting butterflies can reduce anxiety and boost a sense of connection with nature, a study has found. Researchers surveyed participants in the Big Butterfly Count in 2022, in which wildlife charity Butterfly Conservation encouraged people to spend 15 minutes outside counting butterflies to help scientists track how the insects were faring. Surveys completed by 382 people before and after the three-week count period revealed a 9 per cent reduction in anxiety among participants, and a greater sense of connection with nature, as well as noticing butterflies and nature more.\n\nFurther surveys completed by 345 people, which were sent five weeks after the count, did not find nature connectedness and reduced anxiety had been maintained. But they revealed an increase in general wellbeing compared with before the project. The research, published in the journal Biological Conservation, was carried out by Butterfly Conservation and the University of Derby.\n\nThe surveys revealed people had a range of positive and negative emotions associated with taking part, ranging from joy and fascination to sadness and concern about declining insects. Richard Fox, head of science at Butterfly Conservation, said, \"This study is the first to prove that the simple act of looking for and counting butterflies leads to a decrease in anxiety. The results suggest that citizen science projects can play a part in improving people's mental health, as well as gathering important data on how butterflies are faring to inform our conservation work.\"\n\nCarly Butler, lead researcher on the study, said the benefits of reduced anxiety and stronger connectedness with nature were the same whether people just carried out one 15-minute count or did so multiple times. Dr Butler added that participants felt motivated to help butterflies and nature by doing things such as making their gardens butterfly-friendly.",
+  "explanation": "文章第三段第一句提到，调查显示，人们参与活动时产生了多种积极和消极情绪，从喜悦和着迷到对昆虫数量减少的悲伤和担忧。这里的“昆虫”指的就是蝴蝶。故选B。"
+ },
+ "en2025-55": {
+  "question": "What can people do to help butterflies and nature according to the last paragraph?",
+  "options": [
+   {
+    "key": "A",
+    "text": "Expand their butterfly collections."
+   },
+   {
+    "key": "B",
+    "text": "Turn butterfly counting into a routine."
+   },
+   {
+    "key": "C",
+    "text": "Make their gardens fit for butterflies."
+   },
+   {
+    "key": "D",
+    "text": "Persuade their friends to help butterflies."
+   }
+  ],
+  "passage": "Counting butterflies can reduce anxiety and boost a sense of connection with nature, a study has found. Researchers surveyed participants in the Big Butterfly Count in 2022, in which wildlife charity Butterfly Conservation encouraged people to spend 15 minutes outside counting butterflies to help scientists track how the insects were faring. Surveys completed by 382 people before and after the three-week count period revealed a 9 per cent reduction in anxiety among participants, and a greater sense of connection with nature, as well as noticing butterflies and nature more.\n\nFurther surveys completed by 345 people, which were sent five weeks after the count, did not find nature connectedness and reduced anxiety had been maintained. But they revealed an increase in general wellbeing compared with before the project. The research, published in the journal Biological Conservation, was carried out by Butterfly Conservation and the University of Derby.\n\nThe surveys revealed people had a range of positive and negative emotions associated with taking part, ranging from joy and fascination to sadness and concern about declining insects. Richard Fox, head of science at Butterfly Conservation, said, \"This study is the first to prove that the simple act of looking for and counting butterflies leads to a decrease in anxiety. The results suggest that citizen science projects can play a part in improving people's mental health, as well as gathering important data on how butterflies are faring to inform our conservation work.\"\n\nCarly Butler, lead researcher on the study, said the benefits of reduced anxiety and stronger connectedness with nature were the same whether people just carried out one 15-minute count or did so multiple times. Dr Butler added that participants felt motivated to help butterflies and nature by doing things such as making their gardens butterfly-friendly.",
+  "explanation": "根据文章最后一段最后一句可知，参与者通过让花园变得适合蝴蝶生存等方式帮助蝴蝶和自然。故选C。"
+ },
+ "en2025-56": {
+  "question": "补全对话：第 56 空（从 A-H 中选出最佳选项）",
+  "options": [
+   {
+    "key": "A",
+    "text": "You'd better prepare for the test."
+   },
+   {
+    "key": "B",
+    "text": "Try not to worry about it too much."
+   },
+   {
+    "key": "C",
+    "text": "The professor didn't blame you."
+   },
+   {
+    "key": "D",
+    "text": "I have no idea."
+   },
+   {
+    "key": "E",
+    "text": "I don't think the test was hard."
+   },
+   {
+    "key": "F",
+    "text": "It's just who I am."
+   },
+   {
+    "key": "G",
+    "text": "I barely finished the test in time."
+   },
+   {
+    "key": "H",
+    "text": "I need to study harder."
+   }
+  ],
+  "passage": "Directions: Pick out five appropriate expressions from the eight choices below and complete the following dialogue by blackening the corresponding letter on the Answer Sheet.\n\nNick: Hi, Ryan. Do you know when the test results will come out?\nRyan: ____(56)\nNick: I'm anxious to see how I did. ____(57)\nRyan: I'm not that nervous. ____(58)\nNick: I think most of the test was pretty easy, but some of the questions were tricky.\nRyan: ____(59) That won't do you any good.\nNick: How could you stay so calm all the time?\nRyan: ____(60)\nNick: You're lucky. I worry all the time.",
+  "explanation": "参考答案：D"
+ },
+ "en2025-57": {
+  "question": "补全对话：第 57 空（从 A-H 中选出最佳选项）",
+  "options": [
+   {
+    "key": "A",
+    "text": "You'd better prepare for the test."
+   },
+   {
+    "key": "B",
+    "text": "Try not to worry about it too much."
+   },
+   {
+    "key": "C",
+    "text": "The professor didn't blame you."
+   },
+   {
+    "key": "D",
+    "text": "I have no idea."
+   },
+   {
+    "key": "E",
+    "text": "I don't think the test was hard."
+   },
+   {
+    "key": "F",
+    "text": "It's just who I am."
+   },
+   {
+    "key": "G",
+    "text": "I barely finished the test in time."
+   },
+   {
+    "key": "H",
+    "text": "I need to study harder."
+   }
+  ],
+  "passage": "Directions: Pick out five appropriate expressions from the eight choices below and complete the following dialogue by blackening the corresponding letter on the Answer Sheet.\n\nNick: Hi, Ryan. Do you know when the test results will come out?\nRyan: ____(56)\nNick: I'm anxious to see how I did. ____(57)\nRyan: I'm not that nervous. ____(58)\nNick: I think most of the test was pretty easy, but some of the questions were tricky.\nRyan: ____(59) That won't do you any good.\nNick: How could you stay so calm all the time?\nRyan: ____(60)\nNick: You're lucky. I worry all the time.",
+  "explanation": "参考答案：G"
+ },
+ "en2025-58": {
+  "question": "补全对话：第 58 空（从 A-H 中选出最佳选项）",
+  "options": [
+   {
+    "key": "A",
+    "text": "You'd better prepare for the test."
+   },
+   {
+    "key": "B",
+    "text": "Try not to worry about it too much."
+   },
+   {
+    "key": "C",
+    "text": "The professor didn't blame you."
+   },
+   {
+    "key": "D",
+    "text": "I have no idea."
+   },
+   {
+    "key": "E",
+    "text": "I don't think the test was hard."
+   },
+   {
+    "key": "F",
+    "text": "It's just who I am."
+   },
+   {
+    "key": "G",
+    "text": "I barely finished the test in time."
+   },
+   {
+    "key": "H",
+    "text": "I need to study harder."
+   }
+  ],
+  "passage": "Directions: Pick out five appropriate expressions from the eight choices below and complete the following dialogue by blackening the corresponding letter on the Answer Sheet.\n\nNick: Hi, Ryan. Do you know when the test results will come out?\nRyan: ____(56)\nNick: I'm anxious to see how I did. ____(57)\nRyan: I'm not that nervous. ____(58)\nNick: I think most of the test was pretty easy, but some of the questions were tricky.\nRyan: ____(59) That won't do you any good.\nNick: How could you stay so calm all the time?\nRyan: ____(60)\nNick: You're lucky. I worry all the time.",
+  "explanation": "参考答案：E"
+ },
+ "en2025-59": {
+  "question": "补全对话：第 59 空（从 A-H 中选出最佳选项）",
+  "options": [
+   {
+    "key": "A",
+    "text": "You'd better prepare for the test."
+   },
+   {
+    "key": "B",
+    "text": "Try not to worry about it too much."
+   },
+   {
+    "key": "C",
+    "text": "The professor didn't blame you."
+   },
+   {
+    "key": "D",
+    "text": "I have no idea."
+   },
+   {
+    "key": "E",
+    "text": "I don't think the test was hard."
+   },
+   {
+    "key": "F",
+    "text": "It's just who I am."
+   },
+   {
+    "key": "G",
+    "text": "I barely finished the test in time."
+   },
+   {
+    "key": "H",
+    "text": "I need to study harder."
+   }
+  ],
+  "passage": "Directions: Pick out five appropriate expressions from the eight choices below and complete the following dialogue by blackening the corresponding letter on the Answer Sheet.\n\nNick: Hi, Ryan. Do you know when the test results will come out?\nRyan: ____(56)\nNick: I'm anxious to see how I did. ____(57)\nRyan: I'm not that nervous. ____(58)\nNick: I think most of the test was pretty easy, but some of the questions were tricky.\nRyan: ____(59) That won't do you any good.\nNick: How could you stay so calm all the time?\nRyan: ____(60)\nNick: You're lucky. I worry all the time.",
+  "explanation": "参考答案：B"
+ },
+ "en2025-60": {
+  "question": "补全对话：第 60 空（从 A-H 中选出最佳选项）",
+  "options": [
+   {
+    "key": "A",
+    "text": "You'd better prepare for the test."
+   },
+   {
+    "key": "B",
+    "text": "Try not to worry about it too much."
+   },
+   {
+    "key": "C",
+    "text": "The professor didn't blame you."
+   },
+   {
+    "key": "D",
+    "text": "I have no idea."
+   },
+   {
+    "key": "E",
+    "text": "I don't think the test was hard."
+   },
+   {
+    "key": "F",
+    "text": "It's just who I am."
+   },
+   {
+    "key": "G",
+    "text": "I barely finished the test in time."
+   },
+   {
+    "key": "H",
+    "text": "I need to study harder."
+   }
+  ],
+  "passage": "Directions: Pick out five appropriate expressions from the eight choices below and complete the following dialogue by blackening the corresponding letter on the Answer Sheet.\n\nNick: Hi, Ryan. Do you know when the test results will come out?\nRyan: ____(56)\nNick: I'm anxious to see how I did. ____(57)\nRyan: I'm not that nervous. ____(58)\nNick: I think most of the test was pretty easy, but some of the questions were tricky.\nRyan: ____(59) That won't do you any good.\nNick: How could you stay so calm all the time?\nRyan: ____(60)\nNick: You're lucky. I worry all the time.",
+  "explanation": "参考答案：F"
+ },
+ "en2025-61": {
+  "question": "【写作】学生会打算举办一场旧书交换活动。请你给全校同学写一份通知，内容包括： ·旧书交换的好处（如培养节约习惯、增强环保意识等）； ·旧书交换活动的时间及地点； ·可以交换的旧书类别（如课本、小说等）； ·号召大家积极参与。"
+ }
+}
