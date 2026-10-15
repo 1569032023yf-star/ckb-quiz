@@ -5,6 +5,45 @@
   "use strict";
 
   var STORE_KEY = "ckb_app_v1";
+  /* 语音题缺失下划线：已对照真题图片核对的考查字母。
+     2025-3~5 为按题意推定。 */
+  var PHONETIC_PARTS = {
+    "en2020-1": "ou",
+    "en2020-2": "ear",
+    "en2020-3": "o",
+    "en2020-4": "s",
+    "en2020-5": "sc",
+    "en2021-1": "a",
+    "en2021-2": "gh",
+    "en2021-3": "u",
+    "en2021-4": "ture",
+    "en2021-5": "ea",
+    "en2022-1": "a",
+    "en2022-2": "th",
+    "en2022-3": "less",
+    "en2022-4": "oo",
+    "en2022-5": "s",
+    "en2023-1": "s",
+    "en2023-2": "ch",
+    "en2023-3": "b",
+    "en2023-4": "a",
+    "en2023-5": "our",
+    "en2024-1": "u",
+    "en2024-2": "ow",
+    "en2024-3": "c",
+    "en2024-4": "ss",
+    "en2024-5": "ear",
+    "en2025-1": "i",
+    "en2025-2": "ea",
+    "en2025-3": "ow",
+    "en2025-4": "th",
+    "en2025-5": "s",
+    "english-sim-1": "e",
+    "english-sim-2": "s",
+    "english-sim-3": "oo",
+    "english-sim-4": "ar",
+    "english-sim-5": "tion"
+  };
   var TYPE_LABEL = { single: "单选", multiple: "多选", judge: "判断", fill: "填空", essay: "主观" };
 
   /* ---------------- 状态 ---------------- */
@@ -27,6 +66,17 @@
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+  // 只在选项内部给目标字母画线，其他字符安全转义。
+  function markPhoneticPart(word, part) {
+    var raw = String(word == null ? "" : word);
+    var pos = raw.toLowerCase().indexOf(part.toLowerCase());
+    if (pos < 0) return esc(raw); // 数据变动时不凭空高亮
+    return esc(raw.slice(0, pos)) +
+      '<u style="text-decoration-thickness:2px;text-underline-offset:4px">' +
+      esc(raw.slice(pos, pos + part.length)) + '</u>' +
+      esc(raw.slice(pos + part.length));
+  }
 
   /* 文本渲染：转义 HTML + 把 $...$ 渲染成数学公式（KaTeX） */
   function md(s) {
@@ -202,7 +252,11 @@
     $("q-meta").textContent = (session.idx + 1) + "【" + (TYPE_LABEL[q.type] || q.type) + "】";
     $("q-pos").textContent = (session.idx + 1) + "/" + session.list.length;
     $("q-source").textContent = (q.subject ? q.subject + " · " : "") + (q.chapter || "");
-    $("q-text").innerHTML = md(q.question);
+    if (PHONETIC_PARTS[q.id]) {
+      $("q-text").textContent = "选出下划线部分读音与其他三项不同的单词：";
+    } else {
+      $("q-text").innerHTML = md(q.question);
+    }
     $("btn-fav").classList.toggle("on", DB.fav.indexOf(q.id) >= 0);
     $("btn-fav").textContent = DB.fav.indexOf(q.id) >= 0 ? "★" : "☆";
     $("q-progress").style.width = ((session.idx + 1) / session.list.length * 100) + "%";
@@ -226,7 +280,7 @@
     if (!isFill && !isEssay) {
       $("q-options").innerHTML = (q.options || []).map(function (o) {
         return '<div class="opt" data-k="' + esc(o.key) + '"><span class="key">' + esc(o.key) +
-          '</span><span class="txt">' + md(o.text) + "</span></div>";
+          '</span><span class="txt">' + (PHONETIC_PARTS[q.id] ? markPhoneticPart(o.text, PHONETIC_PARTS[q.id]) : md(o.text)) + "</span></div>";
       }).join("");
       $("q-options").querySelectorAll(".opt").forEach(function (el) {
         el.onclick = function () {
